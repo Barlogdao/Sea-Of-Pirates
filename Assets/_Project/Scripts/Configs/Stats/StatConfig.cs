@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Project.Interfaces.Data;
 using Project.Systems.Stats;
 using Project.Utils;
 using UnityEngine;
@@ -44,4 +45,19 @@ public class StatConfig : ScriptableObject
     {
         return currentLevel == MaxLevel;
     }
+}
+
+public class UpgradeSystem
+{
+    private readonly StatsSheet _statsSheet;
+    private readonly IUpgradableStats _stats;
+    private readonly IPlayerStorage _playerStorage;
+
+    public UpgradeSystem(StatsSheet statsSheet, IUpgradableStats stats, IPlayerStorage playerStorage)
+    {
+        _statsSheet = statsSheet;
+        _stats = stats;
+        _playerStorage = playerStorage;
+    }
+
 }

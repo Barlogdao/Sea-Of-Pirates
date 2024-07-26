@@ -2051,6 +2051,7 @@ GameObject:
   - component: {fileID: 1841690482}
   - component: {fileID: 1841690481}
   - component: {fileID: 1841690480}
+  - component: {fileID: 1841690483}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -2067,13 +2068,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1841690473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2382d25d1e4cf47a92472fcdf3b101, type: 3}
+  m_Script: {fileID: 11500000, guid: d9dd336b25bf97b4abc19bbfb79b9c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bar: {fileID: 0}
-  _hitEffect: {fileID: 0}
-  _soundOfHit: {fileID: 0}
-  _effectTime: 0
+  materialColor: {r: 0, g: 0, b: 0, a: 0}
+  horizontalAxis: Horizontal
+  verticalAxis: Vertical
+  jumpButton: Jump
 --- !u!136 &1841690475
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2244,6 +2245,22 @@ MonoBehaviour:
   "_\u0430ttackCoolDown": 3
   _gunList: []
   AttackEffect: {fileID: 0}
+--- !u!114 &1841690483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841690473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae482a5945bf6440bbc58dfdb45454d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bar: {fileID: 0}
+  _hitEffect: {fileID: 0}
+  _soundOfHit: {fileID: 0}
+  _effectTime: 0
 --- !u!1 &1907965792
 GameObject:
   m_ObjectHideFlags: 0

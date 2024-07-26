@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Project.Interfaces.Data;
 using Project.Interfaces.Stats;
+using Project.Systems.Stats;
 
 namespace Project.Systems.Stats
 {
@@ -27,7 +28,7 @@ namespace Project.Systems.Stats
         public void UpgradeStat(StatType type)
         {
             _stats[type].LevelUp();
-            UpdateStatsValues();
+            SetStatValues();
         }
 
         public int GetStatValue(StatType type)
@@ -42,14 +43,18 @@ namespace Project.Systems.Stats
 
         private void UpdateStatsValues()
         {
+            SetStatValues();
+            SaveStats();
+        }
+
+        private void SetStatValues()
+        {
             MaxHealth = GetStatValue(StatType.Health);
             Damage = GetStatValue(StatType.Damage);
             CargoSize = GetStatValue(StatType.CargoSize);
             CannonsAmount = GetStatValue(StatType.CannonsAmount);
             Speed = GetStatValue(StatType.Speed);
             AttackRange = GetStatValue(StatType.AttackRange);
-
-            SaveStats();
         }
 
         private void SaveStats()
@@ -57,4 +62,11 @@ namespace Project.Systems.Stats
             _provider.UpdateStats();
         }
     }
+}
+
+public interface IUpgradableStats
+{
+    int GetStatLevel(StatType type);
+    int GetStatValue(StatType type);
+    void UpgradeStat(StatType type);
 }
