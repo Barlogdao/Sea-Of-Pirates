@@ -1,9 +1,5 @@
-using System;
 using System.Collections.Generic;
-using Project.Interfaces.Data;
-using Project.Interfaces.Quests;
 using Project.Systems.Stats;
-using Project.UI.Quests;
 using Project.Utils;
 using UnityEngine;
 
@@ -15,6 +11,7 @@ public class StatConfig : ScriptableObject
     [SerializeField] private AdditionalUpgradeCost _secondaryCost;
 
     [field: SerializeField] public string Name { get; private set; }
+    [field: SerializeField] public string Description { get; private set; }
     [field: SerializeField] public StatType StatType { get; private set; }
     [field: SerializeField] public Sprite Sprite { get; private set; }
     [field: SerializeField, Min(0)] public int MinValue { get; private set; }

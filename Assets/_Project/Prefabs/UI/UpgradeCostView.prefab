@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4776677460197486132}
   - component: {fileID: 7456915431221316952}
-  - component: {fileID: -2339503370207748263}
+  - component: {fileID: 2771918717030362588}
   m_Layer: 5
   m_Name: UpgradeCostView
   m_TagString: Untagged
@@ -256,7 +256,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7855373164853827106}
   m_CullTransparentMesh: 1
---- !u!114 &-2339503370207748263
+--- !u!114 &2771918717030362588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7855373164853827106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191d487297f9bf24ba6784d8d546ef1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 06f0f2d0b3784684d8ed1c3b5faf73c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ResourceIcon: {fileID: 2154849862817600251}

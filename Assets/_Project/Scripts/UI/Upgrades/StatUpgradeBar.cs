@@ -10,9 +10,12 @@ namespace Project.UI.Upgrades
 {
     public class StatUpgradeBar : MonoBehaviour
     {
+        private const string LevelToken = "Уровень";
+
         [SerializeField] private Image _statIcon;
 
         [SerializeField] private TMP_Text _statName;
+        [SerializeField] private TMP_Text _statDescription;
         [SerializeField] private TMP_Text _levelProgress;
         [SerializeField] private TMP_Text _currentStatValue;
         [SerializeField] private TMP_Text _nextStatValue;
@@ -38,7 +41,6 @@ namespace Project.UI.Upgrades
         private void OnEnable()
         {
             _upgradeButton.onClick.AddListener(TryUpgradeStat);
-
         }
 
         private void OnDisable()
@@ -64,12 +66,25 @@ namespace Project.UI.Upgrades
             int currentValue = _config.GetValue(currentLevel);
             int nextValue = _config.GetValue(nextLevel);
 
-            _levelProgress.text = $"{currentLevel} / {_config.MaxLevel}";
+
+            
+            SetStatValues(currentLevel, nextLevel);
+            SetLevelProgress(currentLevel);
+            CheckUpgradePrice();
+        }
+
+        private void SetLevelProgress(int currentLevel)
+        {
+            _levelProgress.text = $"{LevelToken}: {currentLevel} / {_config.MaxLevel}";
+        }
+
+        private void SetStatValues(int currentLevel, int nextLevel)
+        {
+            int currentValue = _config.GetValue(currentLevel);
+            int nextValue = _config.GetValue(nextLevel);
 
             _currentStatValue.text = currentValue.ToString();
             _nextStatValue.text = nextValue.ToString();
-
-            CheckUpgradePrice();
         }
 
         public void CheckUpgradePrice()
@@ -77,10 +92,10 @@ namespace Project.UI.Upgrades
             int currentLevel = _stats.GetStatLevel(StatType);
             List<GameResourceAmount> upgradePrice = _config.GetUpgradePrice(currentLevel);
 
-            UpdateButtonView(upgradePrice, currentLevel);
+            UpdateUpgradeView(upgradePrice, currentLevel);
         }
 
-        private void UpdateButtonView(List<GameResourceAmount> upgradePrice, int currentLevel)
+        private void UpdateUpgradeView(List<GameResourceAmount> upgradePrice, int currentLevel)
         {
             if (_config.IsMaxLevel(currentLevel))
             {
@@ -120,6 +135,7 @@ namespace Project.UI.Upgrades
             {
                 _stats.UpgradeStat(StatType);
                 Fill();
+
                 StatUpgraded?.Invoke();
             }
         }

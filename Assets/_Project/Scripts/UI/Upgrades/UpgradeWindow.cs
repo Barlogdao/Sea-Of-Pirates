@@ -13,21 +13,19 @@ namespace Project.UI.Upgrades
         [SerializeField] private RectTransform _barHolder;
         [SerializeField] private Button _closeButton;
 
+        private readonly List<StatUpgradeBar> _bars = new();
+
         private StatsSheet _statsSheet;
         private IUpgradableStats _stats;
         private IPlayerStorage _playerStorage;
         private Canvas _windowCanvas;
-
-        private List<StatUpgradeBar> _bars = new();
 
         private void OnDestroy()
         {
             _closeButton.onClick.RemoveListener(Hide);
 
             foreach (StatUpgradeBar bar in _bars)
-            {
                 bar.StatUpgraded -= OnStatUpgraded;
-            }
         }
 
         [Inject]
@@ -60,10 +58,10 @@ namespace Project.UI.Upgrades
 
         private void CreateUpgradeBars()
         {
-            foreach (StatConfig stat in _statsSheet.Stats)
+            foreach (StatConfig statConfig in _statsSheet.Stats)
             {
                 StatUpgradeBar upgradeBar = Instantiate(_barPrefab, _barHolder);
-                upgradeBar.Initialize(stat, _stats, _playerStorage);
+                upgradeBar.Initialize(statConfig, _stats, _playerStorage);
                 upgradeBar.StatUpgraded += OnStatUpgraded;
 
                 _bars.Add(upgradeBar);

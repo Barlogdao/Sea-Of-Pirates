@@ -183,7 +183,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 1
   m_Spacing: 30
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -306,9 +306,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5990586089956020698}
   - component: {fileID: 1459484777387511075}
+  - component: {fileID: 2163041251062010208}
   - component: {fileID: 6525979926038515171}
   - component: {fileID: 4254235703234783810}
-  - component: {fileID: 6330753252787872135}
   - component: {fileID: 4816288418342781742}
   m_Layer: 5
   m_Name: UpgradeWindow
@@ -345,6 +345,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4705331542640345462}
   m_CullTransparentMesh: 1
+--- !u!114 &2163041251062010208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4705331542640345462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9a17b4d36490648958c603c64fd7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _barPrefab: {fileID: 3238837485969649679, guid: 8e673330b24ddfe40ac5d1fbe7e8d82c, type: 3}
+  _barHolder: {fileID: 4772164394682439374}
+  _closeButton: {fileID: 4025696961707893927}
 --- !u!114 &6525979926038515171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.53333336}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -398,21 +413,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &6330753252787872135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4705331542640345462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36198ec4c9bcace4b83462c44a306dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _barPrefab: {fileID: -3199763579485981777, guid: 8e673330b24ddfe40ac5d1fbe7e8d82c, type: 3}
-  _barHolder: {fileID: 4772164394682439374}
-  _closeButton: {fileID: 4025696961707893927}
 --- !u!114 &4816288418342781742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,10 +465,10 @@ RectTransform:
   - {fileID: 3429371638326134784}
   m_Father: {fileID: 5990586089956020698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16.610352, y: 2.7329102}
-  m_SizeDelta: {x: -829.2247, y: -180.415}
+  m_AnchorMin: {x: 0.10345833, y: 0.0842963}
+  m_AnchorMax: {x: 0.89633334, y: 0.92425925}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000011444092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3809630200132241075
 CanvasRenderer:
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

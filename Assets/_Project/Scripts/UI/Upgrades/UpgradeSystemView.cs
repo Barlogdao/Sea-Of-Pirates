@@ -11,6 +11,8 @@ namespace Project.UI.Upgrades
         {
             _upgradeButton = upgradeButton;
             _upgradeWindow = upgradeWindow;
+
+            Hide();
         }
 
         public void Show()
