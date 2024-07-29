@@ -3,22 +3,20 @@ using Project.Configs.Quests;
 using Project.Interfaces.Data;
 using Project.Interfaces.Enemies;
 using Project.Players.PlayerLogic;
+using Project.Systems.Interactables;
 using Project.UI.Quests;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Systems.Quests
 {
-    [RequireComponent(typeof(SphereCollider))]
-    public class QuestGiver : MonoBehaviour
+    public class QuestGiver : InteractableZone
     {
         [SerializeField] private QuestConfig _questConfig;
-        [SerializeField] private float _triggerZoneRadius = 5f;
 
         private IEnemyDeathNotifier _enemyDeathNotifier;
         private IPlayerStorage _playerStorage;
         private QuestView _questView;
-        private SphereCollider _triggerZone;
 
         private Quest _quest;
 
@@ -26,12 +24,6 @@ namespace Project.Systems.Quests
 
         public int QuestID => _questConfig.ID;
 
-        private void Awake()
-        {
-            _triggerZone = GetComponent<SphereCollider>();
-            _triggerZone.isTrigger = true;
-            _triggerZone.radius = _triggerZoneRadius;
-        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -78,12 +70,6 @@ namespace Project.Systems.Quests
             }
 
             QuestStatusChanged?.Invoke(QuestID, status);
-        }
-
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, _triggerZoneRadius);
         }
     }
 }
