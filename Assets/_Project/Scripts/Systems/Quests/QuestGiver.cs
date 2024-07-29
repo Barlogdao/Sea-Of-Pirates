@@ -29,7 +29,8 @@ namespace Project.Systems.Quests
         {
             if (other.TryGetComponent(out Player player))
             {
-                _questView.Show(_quest);
+                if (_quest.Status.State != QuestState.Completed)
+                    _questView.Show(_quest);
             }
         }
 

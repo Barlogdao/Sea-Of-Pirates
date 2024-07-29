@@ -19,6 +19,9 @@ namespace Project.Players.PlayerLogic
         private float _minimalAudioPitch = 0.8f;
         private float _maximalAudioPitch = 1.2f;
         private IPlayerStats _playerStats;
+        private bool _accessPirateBayAllowed = false;
+
+        public bool AccessPirateBayAllowed => _accessPirateBayAllowed;
 
         public int CurrentHealth => _currentHealth;
 
@@ -47,6 +50,11 @@ namespace Project.Players.PlayerLogic
             Invoke(nameof(HideFlash), _effectTime);
             _currentHealth -= damage;
             _bar.SetHealth(_currentHealth, MaxHealth);
+        }
+
+        public void AllowAccessPirateBay()
+        {
+            _accessPirateBayAllowed = true;
         }
 
         private void HideFlash()
