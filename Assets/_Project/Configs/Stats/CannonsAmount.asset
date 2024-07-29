@@ -22,6 +22,7 @@ MonoBehaviour:
     <MaxCost>k__BackingField: 100
     _firstApplicationLevel: 3
     _applicationInterval: 1
+  <Name>k__BackingField: "\u041E\u0440\u0443\u0434\u0438\u044F"
   <StatType>k__BackingField: 5
   <Sprite>k__BackingField: {fileID: 0}
   <MinValue>k__BackingField: 1

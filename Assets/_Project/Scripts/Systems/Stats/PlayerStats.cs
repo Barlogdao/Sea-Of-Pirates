@@ -5,7 +5,7 @@ using Project.Systems.Stats;
 
 namespace Project.Systems.Stats
 {
-    public class PlayerStats : IPlayerStats
+    public class PlayerStats : IPlayerStats, IUpgradableStats
     {
         private IPlayerStatsProvider _provider;
         private Dictionary<StatType, PlayerStat> _stats;

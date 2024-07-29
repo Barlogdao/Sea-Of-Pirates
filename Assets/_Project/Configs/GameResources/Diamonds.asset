@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Diamonds
   m_EditorClassIdentifier: 
   <ID>k__BackingField: 3
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: c4deac0e8f0ef3b459c2ea57583e51df, type: 3}

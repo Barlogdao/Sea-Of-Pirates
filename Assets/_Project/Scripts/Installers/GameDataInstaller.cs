@@ -24,7 +24,7 @@ namespace Project.Installers
             Container.Bind<IPlayerStatsProvider>().To<PlayerStatsProvider>().AsSingle();
             Container.Bind<IQuestsProvider>().To<QuestsProvider>().AsSingle();
 
-            Container.Bind<IPlayerStats>().To<PlayerStats>().AsSingle();
+            Container.BindInterfacesAndSelfTo<PlayerStats>().AsSingle();
             Container.Bind<IPlayerStorage>().To<PlayerStorage>().AsSingle();
         }
     }
