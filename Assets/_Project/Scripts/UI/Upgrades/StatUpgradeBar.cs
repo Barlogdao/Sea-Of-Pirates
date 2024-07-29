@@ -86,14 +86,15 @@ namespace Project.UI.Upgrades
             int currentLevel = _stats.GetStatLevel(_statType);
             List<GameResourceAmount> upgradePrice = _config.GetUpgradePrice(currentLevel);
 
-            UpdateUpgradeView(upgradePrice, currentLevel);
+            UpdatePriceView(upgradePrice, currentLevel);
         }
 
-        private void UpdateUpgradeView(List<GameResourceAmount> upgradePrice, int currentLevel)
+        private void UpdatePriceView(List<GameResourceAmount> upgradePrice, int currentLevel)
         {
             if (_config.IsMaxLevel(currentLevel))
             {
                 _upgradeButton.gameObject.SetActive(false);
+                _nextStatValue.gameObject.SetActive(false);
                 return;
             }
 
@@ -117,7 +118,9 @@ namespace Project.UI.Upgrades
                 }
 
                 GameResourceAmount upgradeCost = upgradePrice[i];
-                _upgradePriceView[i].Set(upgradeCost.Resource.Sprite, upgradeCost.Amount.ToString());
+
+                bool canSpend = _playerStorage.CanSpend(upgradeCost);
+                _upgradePriceView[i].Set(upgradeCost.Resource.Sprite, upgradeCost.Amount.ToString(), canSpend);
             }
         }
 

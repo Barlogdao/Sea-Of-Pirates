@@ -15,7 +15,7 @@ namespace Project.Systems.Stats
             _provider = provider;
             _stats = _provider.LoadStats();
 
-            UpdateStatsValues();
+            SetStatValues();
         }
 
         public int MaxHealth { get; private set; }
@@ -28,7 +28,7 @@ namespace Project.Systems.Stats
         public void UpgradeStat(StatType type)
         {
             _stats[type].LevelUp();
-            SetStatValues();
+            UpdateStatsValues();
         }
 
         public int GetStatValue(StatType type)
