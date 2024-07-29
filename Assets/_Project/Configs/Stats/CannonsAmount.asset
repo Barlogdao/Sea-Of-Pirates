@@ -23,8 +23,10 @@ MonoBehaviour:
     _firstApplicationLevel: 3
     _applicationInterval: 1
   <Name>k__BackingField: "\u041E\u0440\u0443\u0434\u0438\u044F"
+  <Description>k__BackingField: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+    \u043E\u0440\u0443\u0434\u0438\u0439 \u043D\u0430 \u043A\u043E\u0440\u0430\u0431\u043B\u0435"
   <StatType>k__BackingField: 5
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: f67c07a21fc9ce2469a62810c96c2abf, type: 3}
   <MinValue>k__BackingField: 1
   <MaxValue>k__BackingField: 6
   <MaxLevel>k__BackingField: 6
