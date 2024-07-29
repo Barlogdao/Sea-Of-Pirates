@@ -30,12 +30,10 @@ namespace Project.UI.Upgrades
         private StatConfig _config;
         private IUpgradableStats _stats;
         private IPlayerStorage _playerStorage;
-
         private StatType _statType;
 
         public event Action StatUpgraded;
 
-        private StatType StatType => _statType;
         private int CurrentStatLevel => _stats.GetStatLevel(_statType);
 
         private void OnEnable()
@@ -61,15 +59,10 @@ namespace Project.UI.Upgrades
 
         public void Fill()
         {
-            int currentLevel = _stats.GetStatLevel(StatType);
-            int nextLevel = currentLevel + 1;
-            int currentValue = _config.GetValue(currentLevel);
-            int nextValue = _config.GetValue(nextLevel);
-
-
+            int nextLevel = CurrentStatLevel + 1;
             
-            SetStatValues(currentLevel, nextLevel);
-            SetLevelProgress(currentLevel);
+            SetStatValues(CurrentStatLevel, nextLevel);
+            SetLevelProgress(CurrentStatLevel);
             CheckUpgradePrice();
         }
 
@@ -89,7 +82,7 @@ namespace Project.UI.Upgrades
 
         public void CheckUpgradePrice()
         {
-            int currentLevel = _stats.GetStatLevel(StatType);
+            int currentLevel = _stats.GetStatLevel(_statType);
             List<GameResourceAmount> upgradePrice = _config.GetUpgradePrice(currentLevel);
 
             UpdateUpgradeView(upgradePrice, currentLevel);
@@ -133,7 +126,7 @@ namespace Project.UI.Upgrades
 
             if (_playerStorage.TrySpendResource(upgradePrice))
             {
-                _stats.UpgradeStat(StatType);
+                _stats.UpgradeStat(_statType);
                 Fill();
 
                 StatUpgraded?.Invoke();
