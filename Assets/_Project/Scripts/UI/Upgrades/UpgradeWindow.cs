@@ -12,13 +12,13 @@ namespace Project.UI.Upgrades
         [SerializeField] private StatUpgradeBar _barPrefab;
         [SerializeField] private RectTransform _barHolder;
         [SerializeField] private Button _closeButton;
+        [SerializeField] private Canvas _windowCanvas;
 
         private readonly List<StatUpgradeBar> _bars = new();
 
         private StatsSheet _statsSheet;
         private IUpgradableStats _stats;
         private IPlayerStorage _playerStorage;
-        private Canvas _windowCanvas;
 
         private void OnDestroy()
         {
@@ -34,7 +34,6 @@ namespace Project.UI.Upgrades
             _statsSheet = statsSheet;
             _stats = stats;
             _playerStorage = playerStorage;
-            _windowCanvas = GetComponent<Canvas>();
 
             _closeButton.onClick.AddListener(Hide);
 

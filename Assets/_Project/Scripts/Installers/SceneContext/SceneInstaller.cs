@@ -30,9 +30,10 @@ namespace Project.Installers.SceneContext
         private void BindUI()
         {
             Container.Bind<QuestWindow>().FromComponentInHierarchy().AsSingle();
-            Container.Bind<QuestView>().AsSingle().WithArguments(_questButton);
+            Container.Bind<QuestView>().AsSingle().WithArguments(_questButton).NonLazy();
+
             Container.Bind<UpgradeWindow>().FromComponentInHierarchy().AsSingle();
-            Container.Bind<UpgradeSystemView>().AsSingle().WithArguments(_upgradeButton);
+            Container.Bind<UpgradeSystemView>().AsSingle().WithArguments(_upgradeButton).NonLazy();
         }
 
         private void BindQuestSystem()

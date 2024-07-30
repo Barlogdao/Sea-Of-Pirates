@@ -360,6 +360,7 @@ MonoBehaviour:
   _barPrefab: {fileID: 3238837485969649679, guid: 8e673330b24ddfe40ac5d1fbe7e8d82c, type: 3}
   _barHolder: {fileID: 4772164394682439374}
   _closeButton: {fileID: 4025696961707893927}
+  _windowCanvas: {fileID: 4254235703234783810}
 --- !u!114 &6525979926038515171
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -67,6 +67,14 @@ namespace Project.UI.Upgrades
             CheckUpgradePrice();
         }
 
+        public void CheckUpgradePrice()
+        {
+            int currentLevel = _stats.GetStatLevel(_statType);
+            List<GameResourceAmount> upgradePrice = _config.GetUpgradePrice(currentLevel);
+
+            UpdatePriceView(upgradePrice, currentLevel);
+        }
+
         private void SetLevelProgress(int currentLevel)
         {
             _levelProgress.text = $"{LevelToken}: {currentLevel} / {_config.MaxLevel}";
@@ -79,14 +87,6 @@ namespace Project.UI.Upgrades
 
             _currentStatValue.text = currentValue.ToString();
             _nextStatValue.text = nextValue.ToString();
-        }
-
-        public void CheckUpgradePrice()
-        {
-            int currentLevel = _stats.GetStatLevel(_statType);
-            List<GameResourceAmount> upgradePrice = _config.GetUpgradePrice(currentLevel);
-
-            UpdatePriceView(upgradePrice, currentLevel);
         }
 
         private void UpdatePriceView(List<GameResourceAmount> upgradePrice, int currentLevel)

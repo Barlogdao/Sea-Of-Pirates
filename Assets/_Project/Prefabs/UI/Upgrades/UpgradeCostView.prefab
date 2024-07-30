@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1661728811366102538}
   - component: {fileID: 2154849862817600251}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5534793597697844008}
   - component: {fileID: 8713243614575683729}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,5 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f0f2d0b3784684d8ed1c3b5faf73c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ResourceIcon: {fileID: 2154849862817600251}
+  _resourceIcon: {fileID: 2154849862817600251}
   _amount: {fileID: 8713243614575683729}
+  _avaliableColor: {r: 1, g: 1, b: 1, a: 1}
+  _unavaliableColor: {r: 1, g: 0, b: 0, a: 1}
