@@ -15,6 +15,11 @@ public class ResourceBar : MonoBehaviour
 
     private IStorageNotifier _storage;
 
+    private void OnDestroy()
+    {
+        _storage.ResourceAmountChanged -= OnResourceAmountChanged;
+    }
+
     [Inject]
     public void Construct(IStorageNotifier storage)
     {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 849f16055dfa9424a9a0d4895fb62fda
+guid: 9ebec2de8dfa4394dbde8794eab1bcd6
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - IsamiRi Display Regular
+  - Pangolin
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
