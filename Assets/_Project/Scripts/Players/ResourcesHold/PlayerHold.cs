@@ -10,6 +10,7 @@ namespace Project.Players.ResourcesHold
         private readonly IPlayerStats _playerStats;
         private readonly IPlayerStorage _playerStorage;
         private readonly List<GameResourceAmount> _cargo;
+        
         private int _cargoSize => _playerStats.CargoSize;
         
         public PlayerHold(IPlayerStats playerStats, IPlayerStorage playerStorage)
