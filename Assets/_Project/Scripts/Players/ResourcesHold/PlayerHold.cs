@@ -1,22 +1,26 @@
 using System.Collections.Generic;
+using Project.Interfaces.Data;
 using Project.Systems.Stats;
 
 namespace Project.Players.ResourcesHold
 {
-    public class PlayerHold
+    public class PlayerHold : IPlayerHold
     {
-        private int _cargoSize;
-        private List<GameResourceAmount> _cargo;
+        private readonly IPlayerStatsProvider _playerStatsProvider;
+        private readonly List<GameResourceAmount> _cargo;
 
-        public PlayerHold(int cargoSize)
+        public PlayerHold(IPlayerStatsProvider playerStatsProvider)
         {
-            _cargoSize = cargoSize;
+            _playerStatsProvider = playerStatsProvider;
+            CargoSize = _playerStatsProvider.LoadStats()[StatType.CargoSize].GetValue();
             _cargo = new List<GameResourceAmount>();
         }
+        
+        public int CargoSize { get; private set; }
 
         public void AddResource(GameResourceAmount gameResourceAmount)
         {
-            if (_cargo.Count < _cargoSize)
+            if (GetResourcesAmount() < CargoSize)
             {
                 _cargo.Add(gameResourceAmount);
             }
@@ -30,15 +34,10 @@ namespace Project.Players.ResourcesHold
             return cargoCopy;
         }
 
-        public void UpgradeHold()
-        {
-            _cargoSize++;
-        }
-
-        public int GetResourcesAmount()
+        private int GetResourcesAmount()
         {
             int resourcesAmount = 0;
-            
+
             for (int i = 0; i < _cargo.Count; i++)
             {
                 resourcesAmount += _cargo[i].Amount;
