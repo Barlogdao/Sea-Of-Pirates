@@ -20,7 +20,6 @@ namespace Project.Players.ResourcesHold
             _cargo = new List<GameResourceAmount>();
         }
 
-
         public void AddResource(GameResourceAmount gameResourceAmount)
         {
             if (GetResourcesAmount() < _cargoSize)
