@@ -8,6 +8,12 @@ namespace Project.Players.ResourcesHold
         private int _cargoSize;
         private List<GameResourceAmount> _cargo;
 
+        public PlayerHold(int cargoSize)
+        {
+            _cargoSize = cargoSize;
+            _cargo = new List<GameResourceAmount>();
+        }
+
         public void AddResource(GameResourceAmount gameResourceAmount)
         {
             if (_cargo.Count < _cargoSize)
@@ -16,9 +22,12 @@ namespace Project.Players.ResourcesHold
             }
         }
 
-        public void RemoveResources()
+        public List<GameResourceAmount> TakeResources()
         {
+            var cargoCopy = _cargo;
             _cargo.Clear();
+
+            return cargoCopy;
         }
 
         public void UpgradeHold()
