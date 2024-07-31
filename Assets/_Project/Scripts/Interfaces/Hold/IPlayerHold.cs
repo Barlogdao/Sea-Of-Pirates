@@ -1,6 +1,6 @@
 using Project.Systems.Stats;
 
-namespace Project.Players.Hold
+namespace Project.Interfaces.Hold
 {
     public interface IPlayerHold
     {

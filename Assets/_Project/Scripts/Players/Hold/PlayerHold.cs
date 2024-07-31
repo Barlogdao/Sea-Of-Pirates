@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Project.Interfaces.Data;
+using Project.Interfaces.Hold;
 using Project.Interfaces.Stats;
 using Project.Systems.Stats;
 
@@ -10,9 +11,7 @@ namespace Project.Players.Hold
         private readonly IPlayerStats _playerStats;
         private readonly IPlayerStorage _playerStorage;
         private readonly List<GameResourceAmount> _cargo;
-
-        private int _cargoSize => _playerStats.CargoSize;
-
+        
         public PlayerHold(IPlayerStats playerStats, IPlayerStorage playerStorage)
         {
             _playerStats = playerStats;
@@ -20,9 +19,11 @@ namespace Project.Players.Hold
             _cargo = new List<GameResourceAmount>();
         }
 
+        private int CargoSize => _playerStats.CargoSize;
+        
         public void AddResource(GameResourceAmount gameResourceAmount)
         {
-            if (GetResourcesAmount() < _cargoSize)
+            if (GetResourcesAmount() < CargoSize)
             {
                 _cargo.Add(gameResourceAmount);
             }
