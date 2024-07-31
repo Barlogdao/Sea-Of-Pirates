@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -309,17 +309,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 23.4, y: 0, z: 0}
---- !u!114 &1427991910 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
-  m_PrefabInstance: {fileID: 7401176015923953597}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bdda2da70dfe994f80027dc77b16238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1693824216
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,74 +671,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d062034c354193c4ca52527229d1627e, type: 3}
---- !u!1001 &8657465349330978505
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3787957440014125714, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_Name
-      value: EnemyDeathNotifier
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.5823174
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.079511575
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.7708335
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023776408151088494, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4567128309229304859, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
-      propertyPath: _enemySpawners.Array.data[0]
-      value: 
-      objectReference: {fileID: 1427991910}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: abd311e88fd69fc4289186d4b646f9ce, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 428359998}
   - {fileID: 231219309}
-  - {fileID: 8657465349330978505}
   - {fileID: 7401176015923953597}
   - {fileID: 3532752099235808810}
   - {fileID: 1693824220}
