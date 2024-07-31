@@ -3,7 +3,7 @@ using Project.Interfaces.Data;
 using Project.Interfaces.Stats;
 using Project.Systems.Stats;
 
-namespace Project.Players.ResourcesHold
+namespace Project.Players.Hold
 {
     public class PlayerHold : IPlayerHold
     {

@@ -1,7 +1,6 @@
-using System.Collections.Generic;
 using Project.Systems.Stats;
 
-namespace Project.Interfaces.Data
+namespace Project.Players.Hold
 {
     public interface IPlayerHold
     {
