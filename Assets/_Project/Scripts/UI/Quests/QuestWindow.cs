@@ -14,6 +14,10 @@ namespace Project.UI.Quests
         [SerializeField] private TMP_Text _progressValue;
         [SerializeField] private Button _confirmButton;
 
+        private void Awake()
+        {
+            Hide();
+        }
 
         public void Show(IQuest quest)
         {

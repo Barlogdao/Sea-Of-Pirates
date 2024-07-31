@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 3316357454832104498}
   - component: {fileID: 2656521739864374129}
   - component: {fileID: 874598821908585132}
+  - component: {fileID: 8998675369194009765}
   m_Layer: 5
   m_Name: QuestButton
   m_TagString: Untagged
@@ -255,6 +256,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8998675369194009765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090214449427765125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646f1d2a4c453c54d8427461b12a2ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1758649762128072213
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +617,7 @@ GameObject:
   - component: {fileID: 6549954501430388056}
   - component: {fileID: 5241070411367240070}
   - component: {fileID: 4229326636900447296}
+  - component: {fileID: 7312616560121876878}
   m_Layer: 5
   m_Name: Upgrade Button
   m_TagString: Untagged
@@ -713,6 +727,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7312616560121876878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858981494189968562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918c56cb92c5ddf48a85884a45de7dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3458449644065645716
 GameObject:
   m_ObjectHideFlags: 0
