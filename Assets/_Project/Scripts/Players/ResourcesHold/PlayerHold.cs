@@ -1,18 +1,20 @@
 using System.Collections.Generic;
 using Project.Interfaces.Data;
+using Project.Interfaces.Stats;
 using Project.Systems.Stats;
 
 namespace Project.Players.ResourcesHold
 {
     public class PlayerHold : IPlayerHold
     {
-        private readonly IPlayerStatsProvider _playerStatsProvider;
+        private readonly IPlayerStats _playerStats;
+        private readonly IPlayerStorage _playerStorage;
         private readonly List<GameResourceAmount> _cargo;
 
-        public PlayerHold(IPlayerStatsProvider playerStatsProvider)
+        public PlayerHold(IPlayerStats playerStats, IPlayerStorage playerStorage)
         {
-            _playerStatsProvider = playerStatsProvider;
-            CargoSize = _playerStatsProvider.LoadStats()[StatType.CargoSize].GetValue();
+            CargoSize = playerStats.CargoSize;
+            _playerStorage = playerStorage;
             _cargo = new List<GameResourceAmount>();
         }
         
@@ -26,12 +28,9 @@ namespace Project.Players.ResourcesHold
             }
         }
 
-        public List<GameResourceAmount> TakeResources()
+        public void TransferResources()
         {
-            var cargoCopy = _cargo;
-            _cargo.Clear();
-
-            return cargoCopy;
+            _playerStorage.AddResource(_cargo);
         }
 
         private int GetResourcesAmount()
