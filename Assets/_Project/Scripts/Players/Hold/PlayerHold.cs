@@ -1,8 +1,11 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Project.Interfaces.Data;
 using Project.Interfaces.Hold;
 using Project.Interfaces.Stats;
 using Project.Systems.Stats;
+using UnityEngine;
 
 namespace Project.Players.Hold
 {
@@ -11,7 +14,7 @@ namespace Project.Players.Hold
         private readonly IPlayerStats _playerStats;
         private readonly IPlayerStorage _playerStorage;
         private readonly List<GameResourceAmount> _cargo;
-        
+
         public PlayerHold(IPlayerStats playerStats, IPlayerStorage playerStorage)
         {
             _playerStats = playerStats;
@@ -19,32 +22,34 @@ namespace Project.Players.Hold
             _cargo = new List<GameResourceAmount>();
         }
 
+        public event Action<int> CargoChanged;
+
         private int CargoSize => _playerStats.CargoSize;
-        
+
         public void AddResource(GameResourceAmount gameResourceAmount)
         {
-            if (GetResourcesAmount() < CargoSize)
-            {
-                _cargo.Add(gameResourceAmount);
-            }
+            int inHoldCargo = GetResourcesAmount();
+
+            if (inHoldCargo == CargoSize)
+                return;
+
+            gameResourceAmount.Amount = Mathf.Min(gameResourceAmount.Amount, CargoSize - inHoldCargo);
+            _cargo.Add(gameResourceAmount);
+
+            CargoChanged?.Invoke(GetResourcesAmount());
         }
 
-        public void TransferResources()
+        public void LoadToStorage()
         {
             _playerStorage.AddResource(_cargo);
             _cargo.Clear();
+
+            CargoChanged?.Invoke(GetResourcesAmount());
         }
 
         private int GetResourcesAmount()
         {
-            int resourcesAmount = 0;
-
-            for (int i = 0; i < _cargo.Count; i++)
-            {
-                resourcesAmount += _cargo[i].Amount;
-            }
-
-            return resourcesAmount;
+            return _cargo.Sum(resource => resource.Amount);
         }
     }
 }
