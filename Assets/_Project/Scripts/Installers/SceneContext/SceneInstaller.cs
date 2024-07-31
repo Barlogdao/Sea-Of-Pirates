@@ -2,6 +2,7 @@ using Project.Enemies;
 using Project.Spawner;
 using Project.Systems.Quests;
 using Project.UI.Quests;
+using Project.UI.Reward;
 using Project.UI.Upgrades;
 using UnityEngine;
 using UnityEngine.UI;
