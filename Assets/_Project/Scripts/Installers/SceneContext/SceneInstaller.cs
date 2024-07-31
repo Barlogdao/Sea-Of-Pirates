@@ -34,6 +34,8 @@ namespace Project.Installers.SceneContext
 
             Container.Bind<UpgradeWindow>().FromComponentInHierarchy().AsSingle();
             Container.Bind<UpgradeSystemView>().AsSingle().WithArguments(_upgradeButton).NonLazy();
+
+            Container.Bind<RewardView>().FromComponentInHierarchy().AsSingle();
         }
 
         private void BindQuestSystem()

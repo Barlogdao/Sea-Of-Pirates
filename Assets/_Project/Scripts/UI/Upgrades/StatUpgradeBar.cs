@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Project.Interfaces.Data;
+using Project.Interfaces.Stats;
 using Project.Systems.Stats;
 using TMPro;
 using UnityEngine;

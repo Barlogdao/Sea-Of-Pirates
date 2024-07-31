@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Project.Interfaces.Data;
+using Project.Interfaces.Stats;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
