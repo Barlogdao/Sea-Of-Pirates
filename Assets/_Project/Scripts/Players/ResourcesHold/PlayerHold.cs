@@ -10,19 +10,19 @@ namespace Project.Players.ResourcesHold
         private readonly IPlayerStats _playerStats;
         private readonly IPlayerStorage _playerStorage;
         private readonly List<GameResourceAmount> _cargo;
-
+        private int _cargoSize => _playerStats.CargoSize;
+        
         public PlayerHold(IPlayerStats playerStats, IPlayerStorage playerStorage)
         {
-            CargoSize = playerStats.CargoSize;
+            _playerStats = playerStats;
             _playerStorage = playerStorage;
             _cargo = new List<GameResourceAmount>();
         }
-        
-        public int CargoSize { get; private set; }
+
 
         public void AddResource(GameResourceAmount gameResourceAmount)
         {
-            if (GetResourcesAmount() < CargoSize)
+            if (GetResourcesAmount() < _cargoSize)
             {
                 _cargo.Add(gameResourceAmount);
             }
@@ -31,6 +31,7 @@ namespace Project.Players.ResourcesHold
         public void TransferResources()
         {
             _playerStorage.AddResource(_cargo);
+            _cargo.Clear();
         }
 
         private int GetResourcesAmount()
