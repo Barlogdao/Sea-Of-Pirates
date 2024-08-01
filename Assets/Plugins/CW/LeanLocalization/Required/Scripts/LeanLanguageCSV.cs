@@ -262,6 +262,7 @@ namespace Lean.Localization
 
 					if (delimIndex == -1)
 					{
+						Debug.Log("SSSS");
 						throw new System.InvalidOperationException("The specified CSV file contained an invalid entry on line " + i);
 					}
 

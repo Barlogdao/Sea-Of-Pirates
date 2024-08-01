@@ -1,0 +1,15 @@
+token,ru
+stat/Health/name,Прочность
+stat/Speed/name,Скорость
+stat/Damage/name,Мощь
+stat/Hold/name,Трюм
+stat/AttackRange/name,Дальнобойность
+stat/Cannons/name,Орудия
+stat/Health/desc,Запас здоровья корабля
+stat/Speed/desc,Скорость передвижения корабля
+stat/Damage/desc,Наносимый врагам Урон
+stat/Hold/desc,Грузоподъемность корабля
+stat/AttackRange/desc,Дальность стрельбы корабля
+stat/Cannons/desc,Количество орудий на корабле
+quests/Level1/quest01,Затопи вшивую шлюпку
+quests/Level1/quest02,Нужно больше весел!

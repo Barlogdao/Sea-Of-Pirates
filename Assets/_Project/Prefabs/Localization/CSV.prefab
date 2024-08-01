@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7374396640654189861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3900619549021681365}
+  - component: {fileID: 665875875704107640}
+  m_Layer: 0
+  m_Name: CSV
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3900619549021681365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374396640654189861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960.16736, y: 537.5811, z: -0.04638499}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &665875875704107640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374396640654189861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8e0954efa19454f9b96b2895155002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sheetID: 1bDP9W3E1AyxyOwmNkuaH5KHTidd0-W2d_Cz1iJQtB9E
+  _russianCSV: {fileID: 5567568987112963321, guid: dc8f868e9dc6fe34d9666395cd8e28a9, type: 3}
+  _englishCSV: {fileID: 7927852496675102506, guid: dc8f868e9dc6fe34d9666395cd8e28a9, type: 3}
+  _turkishCSV: {fileID: 5678396116678452747, guid: dc8f868e9dc6fe34d9666395cd8e28a9, type: 3}

@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cd9d98eeb1706418aa7d10d6421b54, type: 3}
   m_Name: Quest 1
   m_EditorClassIdentifier: 
+  _descriptionToken: fg/fggh
   <ID>k__BackingField: 1
   <TargetType>k__BackingField: {fileID: 11400000, guid: 5cc56adb66b32cd4eb731575827a2023, type: 2}
   <TargetAmount>k__BackingField: 35
   <Reward>k__BackingField:
     Resource: {fileID: 11400000, guid: 6eaba16e32f520944a83ac31759ef141, type: 2}
     Amount: 69
-  <Description>k__BackingField: "\u0411\u0443\u0445\u0442\u0435 \u043D\u0443\u0436\u043D\u043E
-    \u043C\u043D\u043E\u0433\u043E \u0432\u0435\u0441\u0435\u043B! \u0422\u043E\u043F\u0438
-    \u0448\u043B\u044E\u043F\u043A\u0438!"

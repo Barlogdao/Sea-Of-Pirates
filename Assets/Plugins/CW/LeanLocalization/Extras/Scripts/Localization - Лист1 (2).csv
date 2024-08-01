@@ -1,0 +1,13 @@
+token,ru,en
+stat/Health,Прочность,
+stat/Speed,Скорость,
+stat/Damage,Мощь,
+stat/Hold,Трюм,
+stat/AttackRange,Дальнобойность,
+stat/Cannons,Орудия,
+stat/Health/desc,Запас здоровья корабля,
+stat/Speed/desc,Скорость передвижения корабля,
+stat/Damage/desc,Наносимый врагам Урон,
+stat/Hold/desc,Грузоподъемность корабля,
+stat/AttackRange/desc,Дальность стрельбы корабля,
+stat/Cannons/desc,Количество орудий на корабле,

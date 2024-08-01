@@ -1,0 +1,15 @@
+token,tr
+stat/Health/name,Kuvvet
+stat/Speed/name,Hız
+stat/Damage/name,Güç
+stat/Hold/name,Tutmak
+stat/AttackRange/name,Menzil
+stat/Cannons/name,Silahlar
+stat/Health/desc,Geminin sağlık rezervi
+stat/Speed/desc,Gemi hızı
+stat/Damage/desc,Düşmanlara verilen hasar
+stat/Hold/desc,Geminin taşıma kapasitesi
+stat/AttackRange/desc,Gemi atış menzili
+stat/Cannons/desc,Gemideki silah sayısı
+quests/Level1/quest01,Berbat tekneyi batır
+quests/Level1/quest02,Daha fazla eğlenceye ihtiyacınız var!
