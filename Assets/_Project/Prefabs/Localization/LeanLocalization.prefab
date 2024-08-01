@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4091159073477374030}
   - component: {fileID: 4020807609481623539}
-  - component: {fileID: 5567568987112963321}
-  - component: {fileID: 7927852496675102506}
-  - component: {fileID: 5678396116678452747}
   m_Layer: 0
   m_Name: LeanLocalization
   m_TagString: Untagged
@@ -51,61 +48,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLanguage: Russian
-  detectLanguage: 1
+  detectLanguage: 0
   defaultLanguage: Russian
   saveLoad: 1
-  prefabs: []
---- !u!114 &5567568987112963321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8138916412786789007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Source: {fileID: 4900000, guid: 0d2e3d712978a414e8112a03637905b5, type: 3}
-  Format: 1
-  Language: Russian
-  Cache: 0
-  entries: []
---- !u!114 &7927852496675102506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8138916412786789007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Source: {fileID: 4900000, guid: 043241975c3333b46aea92f92ac0424a, type: 3}
-  Format: 1
-  Language: English
-  Cache: 0
-  entries: []
---- !u!114 &5678396116678452747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8138916412786789007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Source: {fileID: 4900000, guid: 7ab3b2c559b002a4aa3acc9fa5b6b82c, type: 3}
-  Format: 1
-  Language: Turkish
-  Cache: 0
-  entries: []
+  prefabs:
+  - Root: {fileID: 3658104359582579385, guid: 5d0907b0cdc20e4449d369df60c59f6a, type: 3}
+    sources:
+    - {fileID: 198626710538904342, guid: 5d0907b0cdc20e4449d369df60c59f6a, type: 3}
+  - Root: {fileID: 3658104359582579385, guid: ecf2bef02c05b0944833cec837da2ff4, type: 3}
+    sources:
+    - {fileID: 7775561774446416636, guid: ecf2bef02c05b0944833cec837da2ff4, type: 3}
+  - Root: {fileID: 3658104359582579385, guid: 13bf5c7b3b1728544ae27a5b25269034, type: 3}
+    sources:
+    - {fileID: 1357634133306890151, guid: 13bf5c7b3b1728544ae27a5b25269034, type: 3}
 --- !u!1001 &3497647217485724609
 PrefabInstance:
   m_ObjectHideFlags: 0

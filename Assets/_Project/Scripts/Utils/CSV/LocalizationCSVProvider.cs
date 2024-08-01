@@ -1,9 +1,8 @@
 ﻿using Lean.Localization;
-using System.IO;
-using UnityEditor;
 using UnityEngine;
 
-namespace Project.Utils.Editor
+
+namespace Project.Utils.CSV
 {
     public class LocalizationCSVProvider : MonoBehaviour
     {
@@ -69,20 +68,11 @@ namespace Project.Utils.Editor
 
                 string assetName = _fileName + "_" + leanCSV.Language;
 
-                TextAsset asset = ConvertStringToTextAsset(csvText, assetName);
+                TextAsset asset = AssetCreator.ConvertStringToTextAsset(_path, _folderPath, csvText, assetName);
 
                 leanCSV.Source = asset;
                 leanCSV.LoadFromSource();
             }
-        }
-
-        private TextAsset ConvertStringToTextAsset(string text, string fileName)
-        {
-            File.WriteAllText(_path + fileName + ".csv", text);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            TextAsset textAsset = Resources.Load(_folderPath + fileName) as TextAsset;
-            return textAsset;
         }
     }
 }

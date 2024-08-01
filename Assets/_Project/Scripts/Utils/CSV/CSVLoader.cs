@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Project.Utils.Editor
+namespace Project.Utils.CSV
 {
     public class CSVLoader
     {

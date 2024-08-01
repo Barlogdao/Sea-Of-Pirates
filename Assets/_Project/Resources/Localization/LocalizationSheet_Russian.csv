@@ -13,3 +13,6 @@ stat/AttackRange/desc,Дальность стрельбы корабля
 stat/Cannons/desc,Количество орудий на корабле
 quests/Level1/quest01,Затопи вшивую шлюпку
 quests/Level1/quest02,Нужно больше весел!
+quests/ProgressLabel,Потоплено
+quests/OK,Ага
+Interacrables/UpgradePlace,Пристань

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cd9d98eeb1706418aa7d10d6421b54, type: 3}
   m_Name: Quest
   m_EditorClassIdentifier: 
-  _descriptionToken: fg/fggh
+  _descriptionToken: quests/Level1/quest01
   <ID>k__BackingField: 0
   <TargetType>k__BackingField: {fileID: 11400000, guid: 5cc56adb66b32cd4eb731575827a2023, type: 2}
   <TargetAmount>k__BackingField: 1

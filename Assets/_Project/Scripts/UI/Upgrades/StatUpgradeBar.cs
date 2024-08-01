@@ -55,12 +55,13 @@ namespace Project.UI.Upgrades
 
             _statIcon.sprite = _config.Sprite;
             _statType = _config.StatType;
-            _statName.text = _config.Name;
-            _statDescription.text = _config.Description;
         }
 
         public void Fill()
         {
+            _statName.text = _config.Name;
+            _statDescription.text = _config.Description;
+
             int nextLevel = CurrentStatLevel + 1;
             
             SetStatValues(CurrentStatLevel, nextLevel);

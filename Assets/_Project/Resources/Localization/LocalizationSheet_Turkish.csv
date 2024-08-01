@@ -13,3 +13,6 @@ stat/AttackRange/desc,Gemi atış menzili
 stat/Cannons/desc,Gemideki silah sayısı
 quests/Level1/quest01,Berbat tekneyi batır
 quests/Level1/quest02,Daha fazla eğlenceye ihtiyacınız var!
+quests/ProgressLabel,Batık
+quests/OK,Evet
+Interacrables/UpgradePlace,yat Limanı

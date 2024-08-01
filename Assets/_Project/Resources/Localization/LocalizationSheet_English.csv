@@ -1,15 +1,18 @@
 token,en
-stat/Health/name,Strength
+stat/Health/name,Durability
 stat/Speed/name,Speed
 stat/Damage/name,Power
 stat/Hold/name,Hold
 stat/AttackRange/name,Range
-stat/Cannons/name,Guns
-stat/Health/desc,Ship's health reserve
+stat/Cannons/name,Cannons
+stat/Health/desc,Ship's health
 stat/Speed/desc,Ship speed
 stat/Damage/desc,Damage dealt to enemies
 stat/Hold/desc,Ship's carrying capacity
 stat/AttackRange/desc,Ship firing range
-stat/Cannons/desc,Number of guns on the ship
+stat/Cannons/desc,Cannons amount on the ship
 quests/Level1/quest01,Sink the lousy boat
 quests/Level1/quest02,Need more fun!
+quests/ProgressLabel,Sunk
+quests/OK,OK
+Interacrables/UpgradePlace,Marina

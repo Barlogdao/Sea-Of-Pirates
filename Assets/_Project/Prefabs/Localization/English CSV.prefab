@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7374396640654189861
+--- !u!1 &3658104359582579385
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3900619549021681365}
-  - component: {fileID: 6606765245775851610}
+  - component: {fileID: 1598335169571381219}
+  - component: {fileID: 7775561774446416636}
   m_Layer: 0
-  m_Name: CSV
+  m_Name: English CSV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3900619549021681365
+--- !u!4 &1598335169571381219
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7374396640654189861}
+  m_GameObject: {fileID: 3658104359582579385}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960.16736, y: 537.5811, z: -0.04638499}
+  m_LocalPosition: {x: 1.686153, y: -0.115557715, z: -2.528341}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6606765245775851610
+--- !u!114 &7775561774446416636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7374396640654189861}
+  m_GameObject: {fileID: 3658104359582579385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e8e0954efa19454f9b96b2895155002, type: 3}
+  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sheetID: 1bDP9W3E1AyxyOwmNkuaH5KHTidd0-W2d_Cz1iJQtB9E
-  _russianCSV: {fileID: 198626710538904342, guid: 5d0907b0cdc20e4449d369df60c59f6a, type: 3}
-  _englishCSV: {fileID: 7775561774446416636, guid: ecf2bef02c05b0944833cec837da2ff4, type: 3}
-  _turkishCSV: {fileID: 1357634133306890151, guid: 13bf5c7b3b1728544ae27a5b25269034, type: 3}
+  Source: {fileID: 0}
+  Format: 1
+  Language: English
+  Cache: 0
+  entries: []
