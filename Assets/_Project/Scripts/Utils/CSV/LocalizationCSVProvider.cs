@@ -2,7 +2,6 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-
 namespace Project.Utils.CSV
 {
     public class LocalizationCSVProvider : MonoBehaviour
