@@ -3,7 +3,10 @@ guid: 8e8e0954efa19454f9b96b2895155002
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _russianCSV: {fileID: 198626710538904342, guid: 5d0907b0cdc20e4449d369df60c59f6a, type: 3}
+  - _englishCSV: {fileID: 7775561774446416636, guid: ecf2bef02c05b0944833cec837da2ff4, type: 3}
+  - _turkishCSV: {fileID: 1357634133306890151, guid: 13bf5c7b3b1728544ae27a5b25269034, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

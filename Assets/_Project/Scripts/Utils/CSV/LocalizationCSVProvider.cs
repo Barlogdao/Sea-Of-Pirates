@@ -1,4 +1,5 @@
 ﻿using Lean.Localization;
+using NaughtyAttributes;
 using UnityEngine;
 
 
@@ -15,30 +16,21 @@ namespace Project.Utils.CSV
         private const char LineEndings = '\n';
 
         private readonly string _path = Application.dataPath + "/_Project/Resources/Localization/";
-        private readonly string _folderPath = "Localization/";
-
+        private readonly string _assetFolder = "Localization/";
         private readonly string _fileName = "LocalizationSheet";
+
         [SerializeField] private string _sheetID;
         [SerializeField] private LeanLanguageCSV _russianCSV;
         [SerializeField] private LeanLanguageCSV _englishCSV;
         [SerializeField] private LeanLanguageCSV _turkishCSV;
 
-        private CSVLoader _loader = new();
-
         [ExecuteInEditMode]
-        [ContextMenu("Create")]
-        public void CreateCSV()
+        [Button("Update Localization",EButtonEnableMode.Editor)]
+        public void UpdateCSV()
         {
-            _loader.DownloadTable(_sheetID, Process);
-        }
+            CSVLoader loader = new CSVLoader();
 
-        [ExecuteInEditMode]
-        [ContextMenu("Update")]
-        public void LoadToLean()
-        {
-            _russianCSV.LoadFromSource();
-            _englishCSV.LoadFromSource();
-            _turkishCSV.LoadFromSource();
+            loader.DownloadTable(_sheetID, Process);
         }
 
         private void Process(string rawCSV)
@@ -68,7 +60,7 @@ namespace Project.Utils.CSV
 
                 string assetName = _fileName + "_" + leanCSV.Language;
 
-                TextAsset asset = AssetCreator.ConvertStringToTextAsset(_path, _folderPath, csvText, assetName);
+                TextAsset asset = AssetCreator.ConvertStringToTextAsset(_path, _assetFolder, csvText, assetName);
 
                 leanCSV.Source = asset;
                 leanCSV.LoadFromSource();
