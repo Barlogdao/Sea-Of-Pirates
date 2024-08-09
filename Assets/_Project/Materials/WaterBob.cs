@@ -13,13 +13,13 @@ public class WaterBob : MonoBehaviour
 
     private void Awake()
     {
-        initialPosition = transform.position;
+        initialPosition = transform.localPosition;
 
         offset = 1 - (Random.value * 2);
     }
 
     private void Update()
     {
-        transform.position = initialPosition - Vector3.up * Mathf.Sin((Time.time + offset) * period) * height;
+        transform.localPosition = initialPosition - Vector3.up * Mathf.Sin((Time.time + offset) * period) * height;
     }
 }
