@@ -5,6 +5,7 @@ using Project.Spawner;
 using Project.Systems.Leaderboard;
 using Project.Systems.Quests;
 using Project.Systems.Shop;
+using Project.Systems.Upgrades;
 using Project.UI.Leaderboard;
 using Project.UI.Quests;
 using Project.UI.Reward;
@@ -67,7 +68,7 @@ namespace Project.Installers.SceneContext
             Container.Bind<UpgradeWindow>().FromComponentInHierarchy().AsSingle();
             Container.Bind<UpgradeButton>().FromComponentInHierarchy().AsSingle();
 
-            Container.Bind<UpgradeSystemView>().AsSingle().NonLazy();
+            Container.Bind<UpgradeSystem>().AsSingle().NonLazy();
         }
 
         private void BindLeaderboardSystem()

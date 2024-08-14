@@ -1,6 +1,5 @@
 ﻿using Project.Players.PlayerLogic;
 using Project.Systems.Interactables;
-using Project.UI.Upgrades;
 using UnityEngine;
 using Zenject;
 
@@ -9,13 +8,13 @@ namespace Project.Systems.Upgrades
     [RequireComponent(typeof(SphereCollider))]
     public class UpgradePlace : InteractableZone
     {
-        private UpgradeSystemView _upgradeSystemView;
+        private UpgradeSystem _upgradeSystem;
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out Player player))
             {
-                _upgradeSystemView.Show();
+                _upgradeSystem.Show();
             }
         }
 
@@ -23,14 +22,14 @@ namespace Project.Systems.Upgrades
         {
             if (other.TryGetComponent(out Player player))
             {
-                _upgradeSystemView.Hide();
+                _upgradeSystem.Hide();
             }
         }
 
         [Inject]
-        public void Construct(UpgradeSystemView upgradeSystemView)
+        private void Construct(UpgradeSystem upgradeSystemView)
         {
-           _upgradeSystemView = upgradeSystemView;
+           _upgradeSystem = upgradeSystemView;
         }
     }
 }

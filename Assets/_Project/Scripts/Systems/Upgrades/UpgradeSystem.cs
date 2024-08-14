@@ -1,11 +1,13 @@
-﻿namespace Project.UI.Upgrades
+﻿using Project.UI.Upgrades;
+
+namespace Project.Systems.Upgrades
 {
-    public class UpgradeSystemView
+    public class UpgradeSystem
     {
         private readonly UpgradeButton _upgradeButton;
         private readonly UpgradeWindow _upgradeWindow;
 
-        public UpgradeSystemView(UpgradeButton upgradeButton, UpgradeWindow upgradeWindow)
+        public UpgradeSystem(UpgradeButton upgradeButton, UpgradeWindow upgradeWindow)
         {
             _upgradeButton = upgradeButton;
             _upgradeWindow = upgradeWindow;

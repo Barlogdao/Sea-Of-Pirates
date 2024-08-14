@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Project.Utils;
+using Project.Utils.Extensions;
 using System;
 using System.Collections;
 using TMPro;
@@ -38,7 +39,7 @@ namespace Project.UI.Reward
         {
 
             _rewardIcon.sprite = rewardSprite;
-            _rewardAmount.text = rewardAmount.ToString();
+            _rewardAmount.text = rewardAmount.ToNumericalString();
 
             _button.interactable = true;
             _button.onClick.AddListener(() => RequestReward(rewardCallback));

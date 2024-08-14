@@ -1,7 +1,7 @@
-﻿using Agava.YandexGames;
-using Project.Configs.ShopItems;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Agava.YandexGames;
+using Project.Configs.ShopItems;
 
 namespace Project.SDK.InApp
 {
