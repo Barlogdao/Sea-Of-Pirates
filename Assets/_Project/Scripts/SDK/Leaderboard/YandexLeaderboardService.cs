@@ -1,21 +1,21 @@
+using System;
 using System.Collections.Generic;
 using Agava.YandexGames;
-using UnityEngine;
+using Project.Interfaces.SDK;
 
 namespace Project.SDK.Leaderboard
 {
-    public class YandexLeaderboard : MonoBehaviour
+    public class YandexLeaderboardService : ILeaderboardService
     {
         private const string LeaderboardName = "Leaderboard";
-        private const string AnonymousName = "Anonymous";
 
         private readonly List<LeaderboardPlayer> _leaderboardPlayers = new();
 
-        [SerializeField] private LeaderboardView _leaderboardView;
+        public bool IsPlayerAuthorized => PlayerAccount.IsAuthorized;
 
         public void SetPlayerScore(int score)
         {
-            if (PlayerAccount.IsAuthorized == false)
+            if (!IsPlayerAuthorized)
                 return;
 
             Agava.YandexGames.Leaderboard.GetPlayerEntry(LeaderboardName, (result) =>
@@ -25,9 +25,14 @@ namespace Project.SDK.Leaderboard
             });
         }
 
-        public void Fill()
+        public void AuthorizePlayer()
         {
-            if (PlayerAccount.IsAuthorized == false)
+            PlayerAccount.Authorize();
+        }
+
+        public void LoadPlayers(Action<List<LeaderboardPlayer>> onLoadCallback)
+        {
+            if (!IsPlayerAuthorized)
                 return;
 
             _leaderboardPlayers.Clear();
@@ -40,13 +45,10 @@ namespace Project.SDK.Leaderboard
                     int score = entry.score;
                     string name = entry.player.publicName;
 
-                    if (string.IsNullOrEmpty(name))
-                        name = Lean.Localization.LeanLocalization.GetTranslationText(AnonymousName);
-
                     _leaderboardPlayers.Add(new LeaderboardPlayer(rank, name, score));
                 }
 
-                _leaderboardView.ConstructLeaderboard(_leaderboardPlayers);
+                onLoadCallback(_leaderboardPlayers);
             });
         }
     }

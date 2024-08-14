@@ -1,6 +1,6 @@
 ﻿namespace Project.UI.Shop
 {
-    public class ShopButtom : UiButton
+    public class ShopButton : UiButton
     {
     }
 }

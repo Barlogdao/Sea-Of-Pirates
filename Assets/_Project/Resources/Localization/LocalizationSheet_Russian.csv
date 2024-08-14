@@ -22,3 +22,9 @@ UI/ConfirmWindow/button,Подтвердить
 UI/ConfirmWindow/header,Подтвердить покупку?
 UI/Shop/GameItemHeader,РЕСУРСЫ
 UI/Shop/InAppItemHeader,ПРЕДЛОЖЕНИЯ
+Anonymous,Аноним
+Leaderboard/Name,Игрок
+Leaderboard/Rank,Место
+Leaderboard/Score,Потоплено
+Leaderboard/AuthorizationText,Для просмотра таблицы лидеров нужно авторизоваться
+Leaderboard/AuthorizationButton,Авторизоваться

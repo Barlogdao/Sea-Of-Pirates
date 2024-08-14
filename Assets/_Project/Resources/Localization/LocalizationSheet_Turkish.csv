@@ -15,10 +15,16 @@ quests/Level1/quest01,Berbat tekneyi batır
 quests/Level1/quest02,Daha fazla eğlenceye ihtiyacınız var!
 quests/ProgressLabel,Batık
 quests/OK,Evet
-Interactables/UpgradePlace,yat Limanı
+Interactables/UpgradePlace,Marina
 Misc/thousandToken,k
 Misc/millionToken,m
 UI/ConfirmWindow/button,Onaylamak
-UI/ConfirmWindow/header,Satın alma onaylansın mı?
+UI/ConfirmWindow/header,Satın alma işlemi onaylansın mı?
 UI/Shop/GameItemHeader,KAYNAKLAR
 UI/Shop/InAppItemHeader,TEKLİFLER
+Anonymous,Anonim
+Leaderboard/Name,Oyuncu
+Leaderboard/Rank,Rütbe
+Leaderboard/Score,Batık
+Leaderboard/AuthorizationText,Skor tablosunu görebilmek için giriş yapmalısınız
+Leaderboard/AuthorizationButton,Giriş yapmak

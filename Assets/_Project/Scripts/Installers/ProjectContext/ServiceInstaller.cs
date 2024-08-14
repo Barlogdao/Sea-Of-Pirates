@@ -1,6 +1,8 @@
 using Lean.Localization;
+using Project.Interfaces.SDK;
 using Project.SDK.Advertisment;
 using Project.SDK.InApp;
+using Project.SDK.Leaderboard;
 using Project.Systems.Audio;
 using Project.Systems.Pause;
 using System;
@@ -24,15 +26,17 @@ namespace Project.Installers.ProjectContext
             Container.Bind<AdvertismentService>().FromNew().AsSingle();
             Container.BindInterfacesAndSelfTo<FocusController>().FromNew().AsSingle().NonLazy();
 
-            BindBillingProvider();
+            BindSDK();
         }
 
-        private void BindBillingProvider()
+        private void BindSDK()
         {
 #if !UNITY_EDITOR && UNITY_WEBGL
             Container.Bind<IBillingProvider>().To<BillingProvider>().FromNew().AsSingle();
+            Container.Bind<ILeaderboardService>().To<YandexLeaderboardService>().FromNew().AsSingle();
 #else
             Container.Bind<IBillingProvider>().To<MockBillingProvider>().FromNew().AsSingle();
+            Container.Bind<ILeaderboardService>().To<MockLeaderboardService>().FromNew().AsSingle();
 #endif
         }
     }

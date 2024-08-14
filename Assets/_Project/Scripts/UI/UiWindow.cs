@@ -12,7 +12,7 @@ namespace Project.UI
 
         private Canvas _windowCanvas;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _windowCanvas = GetComponent<Canvas>();
 

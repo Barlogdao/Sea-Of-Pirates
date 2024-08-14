@@ -22,3 +22,9 @@ UI/ConfirmWindow/button,Confirm
 UI/ConfirmWindow/header,Confirm purchase?
 UI/Shop/GameItemHeader,RESOURCES
 UI/Shop/InAppItemHeader,OFFERS
+Anonymous,Anonymous
+Leaderboard/Name,Player
+Leaderboard/Rank,Rank
+Leaderboard/Score,Sunk
+Leaderboard/AuthorizationText,You must be logged in to view the leaderboard
+Leaderboard/AuthorizationButton,Login

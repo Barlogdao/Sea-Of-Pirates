@@ -16,7 +16,7 @@ namespace Project.Systems.Shop
         private readonly ShopItemFactory _shopItemfactory;
         private readonly ShopItemsConfigs _shopItemsConfigs;
         private readonly ShopWindow _shopWindow;
-        private readonly ShopButtom _shopButtom;
+        private readonly ShopButton _shopButton;
 
         private bool _isItemsLoaded = false;
 
@@ -26,19 +26,19 @@ namespace Project.Systems.Shop
             ShopItemFactory shopItemfactory,
             ShopItemsConfigs shopItemsConfigs,
             ShopWindow shopWindow,
-            ShopButtom shopButtom)
+            ShopButton shopButtom)
         {
             _playerStorage = playerStorage;
             _billingProvider = billingProvider;
             _shopItemfactory = shopItemfactory;
             _shopItemsConfigs = shopItemsConfigs;
             _shopWindow = shopWindow;
-            _shopButtom = shopButtom;
+            _shopButton = shopButtom;
         }
 
         public void Initialize()
         {
-            _shopButtom.Show(OpenShop);
+            _shopButton.Show(OpenShop);
         }
 
         private void OpenShop()

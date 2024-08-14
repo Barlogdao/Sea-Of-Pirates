@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Project.UI
 {
@@ -12,12 +13,11 @@ namespace Project.UI
 
         private Button _button;
 
-        private void Awake()
+        private void OnDestroy()
         {
-            _button = GetComponent<Button>();
-            _scaleTween.Initialize(transform);
-            Hide();
+            _button.onClick.RemoveAllListeners();
         }
+
         public void Show(Action onClickCallback)
         {
             gameObject.SetActive(true);
@@ -29,6 +29,13 @@ namespace Project.UI
         {
             _button.onClick.RemoveAllListeners();
             gameObject.SetActive(false);
+        }
+
+        [Inject]
+        private void Construct()
+        {
+            _button = GetComponent<Button>();
+            _scaleTween.Initialize(transform);
         }
     }
 }
