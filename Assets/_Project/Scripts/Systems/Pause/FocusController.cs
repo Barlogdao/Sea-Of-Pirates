@@ -1,15 +1,15 @@
 using Agava.WebUtility;
-using Project.SDK.Advertisment;
+using Project.Interfaces.SDK;
 using Project.Systems.Pause;
 using System;
 using UnityEngine;
 
 public class FocusController : IDisposable
 {
-    private PauseService _pauseService;
-    private AdvertismentService _advertisingService;
+    private readonly PauseService _pauseService;
+    private readonly IAdvertismentService _advertisingService;
 
-    public FocusController(PauseService pauseService, AdvertismentService advertisingService)
+    public FocusController(PauseService pauseService, IAdvertismentService advertisingService)
     {
         _pauseService = pauseService;
         _advertisingService = advertisingService;

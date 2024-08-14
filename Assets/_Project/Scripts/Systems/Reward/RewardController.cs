@@ -3,8 +3,8 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using Project.Configs.GameResources;
 using Project.Interfaces.Data;
+using Project.Interfaces.SDK;
 using Project.Interfaces.Stats;
-using Project.SDK.Advertisment;
 using Project.Systems.Stats;
 using Project.UI.Reward;
 using UnityEngine;
@@ -22,7 +22,7 @@ namespace Project.Systems.Reward
         private StatsSheet _statSheet;
         private IUpgradableStats _stats;
         private IPlayerStorage _playerStorage;
-        private AdvertismentService _advertismentService;
+        private IAdvertismentService _advertismentService;
         private RewardView _rewardView;
 
         [Inject]
@@ -30,7 +30,7 @@ namespace Project.Systems.Reward
             StatsSheet statSheet,
             IUpgradableStats stats,
             IPlayerStorage playerStorage,
-            AdvertismentService advertismentService,
+            IAdvertismentService advertismentService,
             RewardView rewardView)
         {
             _statSheet = statSheet;

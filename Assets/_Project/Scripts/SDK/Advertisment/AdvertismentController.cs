@@ -1,35 +1,42 @@
 ﻿using Project.Interfaces.Data;
+using Project.Interfaces.SDK;
 
 namespace Project.SDK.Advertisment
 {
     public class AdvertismentController
     {
         private readonly IAdvertismentData _addData;
+        private readonly IAdvertismentService _advertismentService;
 
-        public AdvertismentController(IAdvertismentData addData)
+        public AdvertismentController(IAdvertismentData addData, IAdvertismentService advertismentService)
         {
             _addData = addData;
-            HandleAdd();
+            _advertismentService = advertismentService;
+            HandleAd();
         }
 
         public bool IsAddActive => _addData.IsAddActive;
 
-        public void HideAdd()
+        public void ShowIntersticialAd()
+        {
+            if (IsAddActive)
+                _advertismentService.ShowInterstitialAd();
+        }
+
+        public void RemoveAd()
         {
             _addData.IsAddActive = false;
             _addData.Save();
 
-            HandleAdd();
+            HandleAd();
         }
 
-        private void HandleAdd()
+        private void HandleAd()
         {
-#if !UNITY_EDITOR && UNITY_WEBGL
-        if (IsStickyActive)
-            Agava.YandexGames.StickyAd.Show();
-        else
-            Agava.YandexGames.StickyAd.Hide();
-#endif
+            if (IsAddActive)
+                _advertismentService.ShowSticky();
+            else
+                _advertismentService.HideSticky();
         }
     }
 }

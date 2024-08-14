@@ -3,7 +3,7 @@ using System;
 
 namespace Project.SDK.InApp
 {
-    public class BillingProvider : IBillingProvider
+    public class YandexBillingService : IBillingService
     {
         public void LoadProductCatalog(Action<CatalogProduct[]> onLoadCallback)
         {

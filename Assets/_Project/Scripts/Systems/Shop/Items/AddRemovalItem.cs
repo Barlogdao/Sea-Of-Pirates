@@ -23,7 +23,7 @@ namespace Project.Systems.Shop.Items
 
         public override void Get()
         {
-            _advertismentController.HideAdd();
+            _advertismentController.RemoveAd();
         }
     }
 }

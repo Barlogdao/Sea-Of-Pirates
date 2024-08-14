@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace Project.SDK.InApp
 {
-    public class MockBillingProvider : IBillingProvider
+    public class MockBillingService : IBillingService
     {
         private readonly ShopItemsConfigs _shopItemsConfigs;
 
-        public MockBillingProvider(ShopItemsConfigs shopItemsConfigs)
+        public MockBillingService(ShopItemsConfigs shopItemsConfigs)
         {
             _shopItemsConfigs = shopItemsConfigs;
         }

@@ -1,63 +1,36 @@
-using Project.Interfaces.Data;
+﻿using Project.Interfaces.SDK;
 using Project.Systems.Pause;
 using System;
 
 namespace Project.SDK.Advertisment
 {
-    public class AdvertismentService
+    public abstract class AdvertismentService : IAdvertismentService
     {
         private readonly PauseService _pauseService;
-        private readonly IAdvertismentStatus _advertismentStatus;
 
-        public AdvertismentService(PauseService pauseService, IAdvertismentStatus advertismentStatus)
+        public AdvertismentService(PauseService pauseService)
         {
             _pauseService = pauseService;
-            _advertismentStatus = advertismentStatus;
         }
 
         public bool IsAdsPlaying { get; private set; } = false;
 
-        public void ShowInterstitialAd(Action onClose = null)
-        {
-            if (_advertismentStatus.IsAddActive == false)
-                return;
+        public abstract void ShowInterstitialAd();
 
-#if UNITY_WEBGL && !UNITY_EDITOR
-        Agava.YandexGames.InterstitialAd.Show(OnOpenCallback, OnCloseInterstitial);
-#else
-            OnOpenCallback();
-            OnCloseInterstitial(true);
-#endif
-            void OnCloseInterstitial(bool wasShown)
-            {
-                OnCloseCallback();
-                onClose?.Invoke();
-            }
-        }
+        public abstract void ShowRewardAd(Action onRewardedCallback);
 
-        public void ShowRewardAd(Action onSuccess)
-        {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        Agava.YandexGames.VideoAd.Show(OnOpenCallback, OnRewardedCallback, OnCloseCallback, OnErrorCallback);
-#else
-            OnOpenCallback();
-            OnRewardedCallback();
-            OnCloseCallback();
+        public abstract void ShowSticky();
 
-#endif
-            void OnRewardedCallback()
-            {
-                onSuccess();
-            }
-        }
+        public abstract void HideSticky();
 
-        private void OnCloseCallback()
+
+        protected void CloseAd()
         {
             IsAdsPlaying = false;
             _pauseService.Unpause();
         }
 
-        private void OnOpenCallback()
+        protected void OpenAd()
         {
             IsAdsPlaying = true;
             _pauseService.Pause();

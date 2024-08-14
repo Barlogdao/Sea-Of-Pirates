@@ -12,7 +12,7 @@ namespace Project.Systems.Shop
     public class ShopSystem : IInitializable
     {
         private readonly IPlayerStorage _playerStorage;
-        private readonly IBillingProvider _billingProvider;
+        private readonly IBillingService _billingService;
         private readonly ShopItemFactory _shopItemfactory;
         private readonly ShopItemsConfigs _shopItemsConfigs;
         private readonly ShopWindow _shopWindow;
@@ -22,14 +22,14 @@ namespace Project.Systems.Shop
 
         public ShopSystem(
             IPlayerStorage playerStorage,
-            IBillingProvider billingProvider,
+            IBillingService billingService,
             ShopItemFactory shopItemfactory,
             ShopItemsConfigs shopItemsConfigs,
             ShopWindow shopWindow,
             ShopButton shopButtom)
         {
             _playerStorage = playerStorage;
-            _billingProvider = billingProvider;
+            _billingService = billingService;
             _shopItemfactory = shopItemfactory;
             _shopItemsConfigs = shopItemsConfigs;
             _shopWindow = shopWindow;
@@ -53,7 +53,7 @@ namespace Project.Systems.Shop
         private void LoadShopItems()
         {
             LoadGameItems();
-            _billingProvider.LoadProductCatalog(LoadInAppItems);
+            _billingService.LoadProductCatalog(LoadInAppItems);
 
             _isItemsLoaded = true;
         }
@@ -87,7 +87,7 @@ namespace Project.Systems.Shop
 
         private void BuyItem(InAppItem item)
         {
-            _billingProvider.HandlePurchase(item.ID, () =>
+            _billingService.HandlePurchase(item.ID, () =>
             {
                 GetShopItem(item);
                 _shopWindow.CheckSlots();
