@@ -33,6 +33,8 @@ namespace Project.Enemies
             if (_health <= MinimumHealth)
             {
                 Died?.Invoke(this);
+
+                Destroy(gameObject);
             }
         }
     }

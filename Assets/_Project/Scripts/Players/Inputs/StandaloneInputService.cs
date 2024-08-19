@@ -11,12 +11,13 @@ namespace Project.Players.Inputs
             get
             {
                 Vector2 targetAxis = SimpleInputAxis();
+
                 if (targetAxis == Vector2.zero)
                 {
                     targetAxis = UnityAxis();
                 }
-                _currentAxis = SmoothTransition(targetAxis);
-                return _currentAxis;
+
+                return SmoothTransition(targetAxis);
             }
         }
 

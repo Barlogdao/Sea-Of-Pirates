@@ -33,7 +33,7 @@ namespace Project.Spawner
             _enemy = _enemyFactory.Create(_enemyConfig, transform.position);
             _enemies.Add(_enemy);
             _enemy.Died += OnEnemyDied;
-            _enemy.transform.position = Random.insideUnitSphere * _spawnRadius;
+            _enemy.transform.position = transform.position + Random.insideUnitSphere * _spawnRadius;
             _enemy.transform.position = new Vector3(
                 _enemy.transform.position.x,
                 transform.position.y,

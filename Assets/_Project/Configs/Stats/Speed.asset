@@ -26,6 +26,6 @@ MonoBehaviour:
   _descriptionToken: stat/Speed/desc
   <StatType>k__BackingField: 3
   <Sprite>k__BackingField: {fileID: 21300000, guid: a817ccc2bf5835a438c322336ca85348, type: 3}
-  <MinValue>k__BackingField: 1
-  <MaxValue>k__BackingField: 10
+  <MinValue>k__BackingField: 15
+  <MaxValue>k__BackingField: 35
   <MaxLevel>k__BackingField: 30

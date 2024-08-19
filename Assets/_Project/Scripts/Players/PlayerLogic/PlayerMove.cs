@@ -1,5 +1,7 @@
+using System;
 using Project.Interfaces.Stats;
 using Project.Players.CamaraLogic;
+using Project.Utils.Extensions;
 using UnityEngine;
 using Zenject;
 
@@ -8,10 +10,15 @@ namespace Project.Players.PlayerLogic
     public class PlayerMove : MonoBehaviour
     {
         [SerializeField] private Rigidbody _playerRigidbody;
+        [SerializeField, Range(0.01f, 0.2f)] private float _rotationDelta;
+
+        private readonly float _rotationMagnitude = 1f;
+
         private IInputService _inputService;
         private Camera _camera;
         private Player _player;
         private IPlayerStats _playerStats;
+        private Vector3 _inputDirection;
 
         private int MovementSpeed => _playerStats.Speed;
 
@@ -20,28 +27,55 @@ namespace Project.Players.PlayerLogic
             _camera = Camera.main;
         }
 
+        private void Update()
+        {
+            ReadInput();
+        }
+
+        private void FixedUpdate()
+        {
+            Rotate();
+            Move();
+        }
+
         [Inject]
-        public void Construct(IPlayerStats playerStats, IInputService inputService)
+        private void Construct(IPlayerStats playerStats, IInputService inputService)
         {
             _playerStats = playerStats;
             _inputService = inputService;
         }
 
-        private void Update()
+        private void ReadInput()
         {
-            Vector3 movementVector = Vector3.zero;
+            _inputDirection = Vector3.zero;
 
             if (_inputService.Axis.sqrMagnitude > 0.001f)
             {
-                movementVector = _camera.transform.TransformDirection(_inputService.Axis);
-                movementVector.y = 0;
-                movementVector.Normalize();
-
-                transform.forward = movementVector;
+                _inputDirection = _camera.transform.TransformDirection(_inputService.Axis).WithZeroY();
             }
+        }
 
-            Vector3 velocity = movementVector * MovementSpeed;
-            velocity.y = _playerRigidbody.velocity.y;
+        private void Rotate()
+        {
+            if (_inputDirection == Vector3.zero)
+                return;
+
+            Vector3 rotationAngle = Vector3.RotateTowards(
+                transform.forward,
+                _inputDirection,
+                _rotationDelta,
+                _rotationMagnitude);
+
+            transform.forward = rotationAngle;
+        }
+
+        private void Move()
+        {
+            if (Vector3.Dot(transform.forward, _inputDirection) < 0)
+                return;
+
+            Vector3 velocity = (_inputDirection.normalized * MovementSpeed);
+
             _playerRigidbody.velocity = velocity;
         }
 
