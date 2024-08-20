@@ -19,7 +19,7 @@ Interactables/UpgradePlace,Marina
 Misc/thousandToken,k
 Misc/millionToken,m
 UI/ConfirmWindow/button,Onaylamak
-UI/ConfirmWindow/header,Satın alma işlemi onaylansın mı?
+UI/ConfirmWindow/header,Satın alma onaylansın mı?
 UI/Shop/GameItemHeader,KAYNAKLAR
 UI/Shop/InAppItemHeader,TEKLİFLER
 Anonymous,Anonim
@@ -28,3 +28,6 @@ Leaderboard/Rank,Rütbe
 Leaderboard/Score,Batık
 Leaderboard/AuthorizationText,Skor tablosunu görebilmek için giriş yapmalısınız
 Leaderboard/AuthorizationButton,Giriş yapmak
+UI/NextLevel/CanPass,Artık resiflerden güvenle geçebiliriz. Daha ileri gitmek ister misin?
+UI/NextLevel/CanNotPass, we'll be overwhelmed right away! Come back with the map."
+UI/NextLevel/EndGame,Oyunu tamamladığınız için tebrikler! Bir sonraki güncellemelerde bize katılın!

@@ -5261,6 +5261,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5268,6 +5272,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Left 3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -5345,6 +5353,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5352,6 +5364,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Right 4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -5437,6 +5453,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5444,6 +5464,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Left 5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -5521,6 +5545,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5528,6 +5556,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Right 1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -5605,6 +5637,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5612,6 +5648,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Right 2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -5811,6 +5851,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5818,6 +5862,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Left 4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -5895,6 +5943,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5902,6 +5954,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Right 5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -5979,6 +6035,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -5986,6 +6046,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Right 3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -6071,6 +6135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -6078,6 +6146,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Left 2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive
@@ -6250,6 +6322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3014511276244553490, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334135870146518314, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: _playerAttack
       value: 
@@ -6257,6 +6333,10 @@ PrefabInstance:
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_Name
       value: Gun(Left 1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6113700293451810349, guid: 5a926071fcdc355408bccc20a05e8dd3, type: 3}
       propertyPath: m_IsActive

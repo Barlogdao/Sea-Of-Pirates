@@ -5,7 +5,7 @@ namespace Project.Systems.Interactables
     [RequireComponent(typeof(SphereCollider))]
     public abstract class InteractableZone : MonoBehaviour
     {
-        [SerializeField] private float _triggerZoneRadius = 5f;
+        [SerializeField] private float _triggerZoneRadius = 30f;
         [SerializeField] private Color _gizmosColor = Color.white;
 
         private SphereCollider _triggerZone;

@@ -15,7 +15,7 @@ namespace Project.SDK.Advertisment
             HandleAd();
         }
 
-        public bool IsAddActive => _addData.IsAddActive;
+        public bool IsAddActive => _addData.IsAdActive;
 
         public void ShowIntersticialAd()
         {
@@ -25,7 +25,7 @@ namespace Project.SDK.Advertisment
 
         public void RemoveAd()
         {
-            _addData.IsAddActive = false;
+            _addData.IsAdActive = false;
             _addData.Save();
 
             HandleAd();

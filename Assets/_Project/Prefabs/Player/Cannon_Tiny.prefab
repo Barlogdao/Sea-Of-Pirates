@@ -104,7 +104,7 @@ MonoBehaviour:
   _maximalAudioPitch: 1.1
   _effectTime: 1
   _playerAttack: {fileID: 0}
-  _audioClip: {fileID: 8300000, guid: 3e91e29cc243c6848bdb365f6bede657, type: 3}
+  _audioClip: {fileID: 8300000, guid: aa2c78809ec83bc4891d63066860ee29, type: 3}
 --- !u!65 &4049954851807686328
 BoxCollider:
   m_ObjectHideFlags: 0

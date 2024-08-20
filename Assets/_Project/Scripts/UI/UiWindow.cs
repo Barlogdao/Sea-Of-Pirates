@@ -19,7 +19,7 @@ namespace Project.UI
 
         private Canvas _windowCanvas;
 
-        private bool IsCLosed => _windowCanvas.enabled == false;
+        private bool IsClosed => _windowCanvas.enabled == false;
 
         protected virtual void Awake()
         {
@@ -37,7 +37,7 @@ namespace Project.UI
 
         public virtual void Hide()
         {
-            if (IsCLosed)
+            if (IsClosed)
                 return;
 
             _audioService.PlaySound(_closeWindowSound);

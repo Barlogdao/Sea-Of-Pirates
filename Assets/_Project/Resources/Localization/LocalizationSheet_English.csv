@@ -28,3 +28,6 @@ Leaderboard/Rank,Rank
 Leaderboard/Score,Sunk
 Leaderboard/AuthorizationText,You must be logged in to view the leaderboard
 Leaderboard/AuthorizationButton,Login
+UI/NextLevel/CanPass,Now we can safely pass through the reefs. Want to go further?
+UI/NextLevel/CanNotPass,"Dangerous reefs ahead! Without a map
+UI/NextLevel/EndGame,Congratulations on completing the game! Come join us in the next updates!

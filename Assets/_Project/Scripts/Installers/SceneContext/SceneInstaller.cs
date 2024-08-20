@@ -1,3 +1,4 @@
+using Project.Configs.Level;
 using Project.Enemies;
 using Project.Interfaces.Hold;
 using Project.Players.Hold;
@@ -6,23 +7,35 @@ using Project.Systems.Leaderboard;
 using Project.Systems.Quests;
 using Project.Systems.Shop;
 using Project.Systems.Upgrades;
+using Project.UI;
 using Project.UI.Leaderboard;
 using Project.UI.Quests;
 using Project.UI.Reward;
 using Project.UI.Shop;
 using Project.UI.Upgrades;
+using UnityEngine;
 using Zenject;
 
 namespace Project.Installers.SceneContext
 {
     public class SceneInstaller : MonoInstaller
     {
+        [SerializeField] private LevelConfig _levelConfig;
+
         public override void InstallBindings()
         {
+            BindConfigs();
             BindEnemies();
             BindSystems();
+            BindUI();
             BindPlayer();
         }
+
+        private void BindConfigs()
+        {
+            Container.Bind<LevelConfig>().FromInstance(_levelConfig).AsSingle();
+        }
+
         private void BindEnemies()
         {
             Container.Bind<EnemySpawner>().FromComponentsInHierarchy().AsCached();
@@ -35,8 +48,12 @@ namespace Project.Installers.SceneContext
             BindShopSystem();
             BindUpgradeSystem();
             BindLeaderboardSystem();
+        }
 
+        private void BindUI()
+        {
             Container.Bind<RewardView>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<NextLevelWindow>().FromComponentInHierarchy().AsSingle();
         }
 
         private void BindPlayer()

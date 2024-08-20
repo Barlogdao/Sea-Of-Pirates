@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a7ce39995a9c24e900f885ed20e653, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
+  _loadingScene: LoadingScene
+  _firstLevelScene: TestVisualScene
   <EarnResourceSound>k__BackingField: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
   <QuestDoneSound>k__BackingField: {fileID: 8300000, guid: 262e8cd8a55950542989ccf82c12895d, type: 3}

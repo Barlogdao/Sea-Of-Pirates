@@ -2,6 +2,6 @@
 {
     public interface IAdvertismentData : IAdvertismentStatus, ISaveable
     {
-        new bool IsAddActive { get; set; }
+        new bool IsAdActive { get; set; }
     }
 }

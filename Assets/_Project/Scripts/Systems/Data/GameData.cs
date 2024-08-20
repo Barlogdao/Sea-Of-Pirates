@@ -10,5 +10,11 @@ namespace Project.Systems.Data
         public List<QuestData> Quests = new List<QuestData>();
 
         public bool IsAddActive = true;
+        public string CurrentScene;
+
+        public GameData(string sceneName) 
+        {
+            CurrentScene = sceneName;
+        }
     }
 }
