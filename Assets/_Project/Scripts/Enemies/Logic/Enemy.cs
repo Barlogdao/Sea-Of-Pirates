@@ -49,6 +49,7 @@ namespace Project.Enemies.Logic
             Player player,
             IAudioService audioService)
         {
+            SetSpawnPosition();
             _shipCollider = GetComponent<BoxCollider>();
             _stateMachine = GetComponent<EnemyStateMachine>();
 
@@ -58,7 +59,6 @@ namespace Project.Enemies.Logic
             _view = Instantiate(_config.View, transform);
             _currentHealth = config.MaxHealth;
 
-            SetSpawnPosition();
             SetShipColliderSize();
 
             _view.Initialize(_vfxSpawner, audioService);

@@ -40,6 +40,7 @@ namespace Project.Enemies.Logic.States.Idle
         {
             Vector3 newPosition = GetRandomPosition();
 
+
             while (IsValidPosition(newPosition) == false)
             {
                 newPosition = GetRandomPosition();
