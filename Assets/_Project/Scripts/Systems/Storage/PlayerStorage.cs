@@ -35,8 +35,8 @@ namespace Project.Systems.Storage
 
         public void AddResource(GameResource gameResource, int amount)
         {
-            _storage[gameResource] += amount;
-            ResourceAmountChanged?.Invoke(gameResource, _storage[gameResource]);
+            AddToStorage(gameResource, amount);
+
             _audioService.PlaySound(_earnResourceSound);
             SaveResources();
         }
@@ -48,10 +48,11 @@ namespace Project.Systems.Storage
 
         public void AddResource(List<GameResourceAmount> gameResourcesAmounts)
         {
-            foreach (var gameResourceAmount in gameResourcesAmounts)
-            {
-                AddResource(gameResourceAmount.Resource, gameResourceAmount.Amount);
-            }
+            foreach (GameResourceAmount gameResourceAmount in gameResourcesAmounts)
+                AddToStorage(gameResourceAmount.Resource,gameResourceAmount.Amount);
+
+            _audioService.PlaySound(_earnResourceSound);
+            SaveResources();
         }
 
         public bool TrySpendResource(GameResource gameResource, int amount)
@@ -98,6 +99,12 @@ namespace Project.Systems.Storage
         public bool CanSpend(List<GameResourceAmount> gameResourcesAmounts)
         {
             return gameResourcesAmounts.All(CanSpend);
+        }
+
+        private void AddToStorage(GameResource gameResource, int amount)
+        {
+            _storage[gameResource] += amount;
+            ResourceAmountChanged?.Invoke(gameResource, _storage[gameResource]);
         }
 
         private void SpendResource(GameResource gameResource, int amount)

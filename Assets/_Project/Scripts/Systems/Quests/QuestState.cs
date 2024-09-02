@@ -4,6 +4,7 @@
     {
         Avaliable,
         Taken,
+        InProgress,
         Done,
         Completed
     }

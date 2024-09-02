@@ -88,7 +88,9 @@ namespace Project.Installers.SceneContext
             Container.Bind<QuestView>().AsSingle().NonLazy();
 
             Container.Bind<QuestGiver>().FromComponentsInHierarchy().AsCached();
-            Container.BindInterfacesTo<QuestSystem>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<QuestSystem>().FromNew().AsSingle();
+
+            Container.BindInterfacesAndSelfTo<QuestEnemyMarker>().FromNew().AsSingle().NonLazy();
         }
 
         private void BindShopSystem()

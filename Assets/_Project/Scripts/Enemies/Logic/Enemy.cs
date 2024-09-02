@@ -39,6 +39,7 @@ namespace Project.Enemies.Logic
         public EnemyMover Mover => _mover;
         public Collider ShipCollider => _shipCollider;
         public PlayerDetector Detector => _playerDetector;
+        public Transform Transform => transform;
         public Vector3 Position => transform.position;
         public GameResourceAmount Loot => _config.Loot;
         public Vector3 SpawnPosition { get; private set; }

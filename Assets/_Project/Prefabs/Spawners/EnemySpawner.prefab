@@ -52,3 +52,4 @@ MonoBehaviour:
   _obstaclesMask:
     serializedVersion: 2
     m_Bits: 704
+  _questMark: {fileID: 4071860422916454508, guid: bb342cac5972b83479c439456bbd4403, type: 3}

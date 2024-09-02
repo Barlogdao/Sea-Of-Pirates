@@ -22,7 +22,7 @@ namespace Project.Systems.Quests
             InitializeState();
         }
 
-        public event Action<QuestStatus> StatusChanged;
+        public event Action<Quest> StatusChanged;
 
         public QuestConfig Config => _config;
         public QuestStatus Status => _status;
@@ -39,7 +39,9 @@ namespace Project.Systems.Quests
                     break;
 
                 case QuestState.Taken:
-                    CheckProgress();
+                    break;
+
+                case QuestState.InProgress:
                     break;
 
                 case QuestState.Done:
@@ -63,23 +65,33 @@ namespace Project.Systems.Quests
 
         private void InitializeState()
         {
-            if (State == QuestState.Taken)
+            if (State == QuestState.Taken || State == QuestState.InProgress)
                 Subscribe();
-        }
-
-        private void ChangeState(QuestState state)
-        {
-            _status.State = state;
-            StatusChanged?.Invoke(_status);
         }
 
         private void CheckProgress()
         {
+            if (IsQuestStarted())
+            {
+                ChangeState(QuestState.InProgress);
+            }
+
             if (IsDone())
             {
                 Unsubscribe();
                 ChangeState(QuestState.Done);
             }
+        }
+
+        private void ChangeState(QuestState state)
+        {
+            _status.State = state;
+            StatusChanged?.Invoke(this);
+        }
+
+        private bool IsQuestStarted()
+        {
+            return State == QuestState.Taken && Progress > 0;
         }
 
         private bool IsDone()
@@ -92,7 +104,7 @@ namespace Project.Systems.Quests
             if (enemyType == _config.TargetType)
             {
                 _status.Progress++;
-                StatusChanged?.Invoke(_status);
+                StatusChanged?.Invoke(this);
 
                 CheckProgress();
             }

@@ -23,6 +23,7 @@ namespace Project.Systems.Quests
         public event Action<int, QuestStatus> QuestStatusChanged;
 
         public int QuestID => _questConfig.ID;
+        public Quest Quest => _quest;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -66,17 +67,17 @@ namespace Project.Systems.Quests
             _quest.StatusChanged += OnQuestStatusChanged;
         }
 
-        private void OnQuestStatusChanged(QuestStatus status)
+        private void OnQuestStatusChanged(Quest quest)
         {
-            if (status.State == QuestState.Completed)
+            if (quest.Status.State == QuestState.Completed)
             {
                 _playerStorage.AddResource(_questConfig.Reward);
                 _questView.Hide();
             }
 
-            _questMarker.SetMarkerVisual(status.State);
+            _questMarker.SetMarkerVisual(quest.Status.State);
 
-            QuestStatusChanged?.Invoke(QuestID, status);
+            QuestStatusChanged?.Invoke(QuestID, quest.Status);
         }
     }
 }

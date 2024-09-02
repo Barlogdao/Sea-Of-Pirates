@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Project.Configs.Game;
 using Project.Interfaces.Audio;
 using Project.Interfaces.Data;
@@ -36,6 +37,11 @@ namespace Project.Systems.Quests
         public void Initialize()
         {
             InitializeQuestGivers();
+        }
+
+        public IEnumerable<Quest> GetQuests()
+        {
+            return _questGivers.Select(q => q.Quest);
         }
 
         private void InitializeQuestGivers()
