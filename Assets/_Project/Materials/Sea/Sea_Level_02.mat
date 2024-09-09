@@ -90,7 +90,7 @@ Material:
     - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DepthMaxDistance: 1.3
+    - _DepthMaxDistance: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _EmissionScaleUI: 0
@@ -101,8 +101,8 @@ Material:
     - _FlatSpecularSize: 0.1
     - _Flatness: 1
     - _FlatnessExtra: 1
-    - _FoamMaxDistance: 1
-    - _FoamMinDistance: 0.6
+    - _FoamMaxDistance: 0.6
+    - _FoamMinDistance: 0.4
     - _GlossMapScale: 1
     - _Glossiness: 0.307
     - _GlossyReflections: 1
@@ -148,7 +148,7 @@ Material:
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _DepthGradientDeep: {r: 0.509434, g: 0.21221553, b: 0.074012086, a: 1}
-    - _DepthGradientShallow: {r: 0.9811321, g: 0.38463563, b: 0, a: 0.12941177}
+    - _DepthGradientShallow: {r: 0.9811321, g: 0.38463563, b: 0, a: 0.8156863}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}

@@ -20,9 +20,9 @@ namespace Project.Systems.Quests
         private QuestView _questView;
         private Quest _quest;
 
-        public event Action<int, QuestStatus> QuestStatusChanged;
+        public event Action<string, QuestStatus> QuestStatusChanged;
 
-        public int QuestID => _questConfig.ID;
+        public string QuestID => _questConfig.ID;
         public Quest Quest => _quest;
 
         private void OnDestroy()

@@ -5,7 +5,7 @@ namespace Project.Interfaces.Data
 {
     public interface IQuestsProvider
     {
-        Dictionary<int, QuestStatus> LoadQuests();
-        void UpdateQuest(int id, QuestStatus status);
+        Dictionary<string, QuestStatus> LoadQuests();
+        void UpdateQuest(string id, QuestStatus status);
     }
 }

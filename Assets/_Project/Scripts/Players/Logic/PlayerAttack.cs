@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Agava.YandexGames;
-using Project.Interfaces.Audio;
 using Project.Interfaces.Enemies;
 using Project.Interfaces.Stats;
 using Project.Players.View;
@@ -26,7 +24,6 @@ namespace Project.Players.Logic
         private IPlayerStats _playerStats;
         private Coroutine _battleCoroutine;
         private WaitUntil _hasTargetAwaiter;
-        private int _numberEnemiesKilled = 0;
         public event Action<IEnemy> EnemyKilled;
 
         public int Damage => _playerStats.Damage;

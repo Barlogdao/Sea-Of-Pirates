@@ -8,16 +8,16 @@ using Zenject;
 
 namespace Project.Systems.Quests
 {
-    public class QuestEnemyMarker : IInitializable, IDisposable
+    public class QuestEnemyHandler : IInitializable, IDisposable
     {
         private const float SpawnerShowDuration = 3f;
 
-        private readonly Dictionary<Quest, List<EnemySpawner>> _questEnemySpawners = new();
-        private readonly List<EnemySpawner> _spawners;
+        private readonly Dictionary<Quest, List<BaseEnemySpawner>> _questEnemySpawners = new();
+        private readonly List<BaseEnemySpawner> _spawners;
         private readonly QuestSystem _questSystem;
         private readonly CameraSystem _cameraSystem;
 
-        public QuestEnemyMarker(List<EnemySpawner> spawners, QuestSystem questSystem, CameraSystem cameraSystem)
+        public QuestEnemyHandler(List<BaseEnemySpawner> spawners, QuestSystem questSystem, CameraSystem cameraSystem)
         {
             _spawners = spawners;
             _questSystem = questSystem;
@@ -28,9 +28,9 @@ namespace Project.Systems.Quests
         {
             foreach (Quest quest in _questSystem.GetQuests())
             {
-                if (_spawners.Any(s => s.EnemyType == quest.Config.TargetType))
+                if (_spawners.Any(spawner => spawner.EnemyType == quest.Config.TargetType))
                 {
-                    var questSpawners = _spawners.Where(s => s.EnemyType == quest.Config.TargetType).ToList();
+                    List<BaseEnemySpawner> questSpawners = _spawners.Where(s => s.EnemyType == quest.Config.TargetType).ToList();
                     _questEnemySpawners.Add(quest, questSpawners);
                 }
             }
@@ -66,7 +66,7 @@ namespace Project.Systems.Quests
         {
             foreach (var spawner in _questEnemySpawners[quest])
             {
-                spawner.MarkEnemies();
+                spawner.PrepareForQuest();
             }
         }
 
@@ -74,7 +74,7 @@ namespace Project.Systems.Quests
         {
             foreach (var spawner in _questEnemySpawners[quest])
             {
-                spawner.UnmarkEnemies();
+                spawner.ReleaseFromQuest();
             }
         }
 

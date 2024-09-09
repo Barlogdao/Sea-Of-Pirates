@@ -90,7 +90,7 @@ Material:
     - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DepthMaxDistance: 1.25
+    - _DepthMaxDistance: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _EmissionScaleUI: 0

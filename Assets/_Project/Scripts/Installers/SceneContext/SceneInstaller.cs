@@ -50,7 +50,7 @@ namespace Project.Installers.SceneContext
         {
             Container.Bind<VfxSpawner>().FromInstance(_vfxSpawner).AsSingle();
             Container.Bind<EnemyFactory>().FromNew().AsSingle().WithArguments(_enemyPrefab);
-            Container.Bind<EnemySpawner>().FromComponentsInHierarchy().AsCached();
+            Container.Bind<BaseEnemySpawner>().FromComponentsInHierarchy().AsCached();
             Container.Bind<ShopItemFactory>().AsSingle();
         }
 
@@ -60,7 +60,7 @@ namespace Project.Installers.SceneContext
             Container.BindInterfacesAndSelfTo<ShopSystem>().FromNew().AsSingle().NonLazy();
             Container.Bind<UpgradeSystem>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<LeaderboardSystem>().FromNew().AsSingle().NonLazy();
-            Container.BindInterfacesAndSelfTo<QuestEnemyMarker>().FromNew().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<QuestEnemyHandler>().FromNew().AsSingle().NonLazy();
             Container.BindInterfacesTo<EnemyDeathNotifier>().AsSingle();
             Container.Bind<CameraSystem>().FromComponentInNewPrefab(_cameraSystemPrefab).AsSingle().NonLazy();
             Container.BindInterfacesTo<ScoreController>().AsSingle().NonLazy();

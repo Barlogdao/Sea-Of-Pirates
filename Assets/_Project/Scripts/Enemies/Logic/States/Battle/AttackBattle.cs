@@ -1,4 +1,5 @@
-﻿using Project.Players.Logic;
+﻿using Project.Enemies.View;
+using Project.Players.Logic;
 using Unity.Profiling;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Project.Enemies.Logic.States.Battle
     {
         [SerializeField] private float _attackAngle = 60;
 
+        private AttackRangeView _attackRangeView;
         private float _timeToAttack;
 
         private float HalfAttackAngle => _attackAngle / 2f;
@@ -17,6 +19,13 @@ namespace Project.Enemies.Logic.States.Battle
         {
             base.Enter();
             ResetCooldown();
+            _attackRangeView.ShowAttackRange();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            _attackRangeView.HideAttackRange();
         }
 
         public override void Update()
@@ -31,6 +40,13 @@ namespace Project.Enemies.Logic.States.Battle
             {
                 Shoot();
             }
+        }
+
+        protected override void OnInitialize()
+        {
+            base.OnInitialize();
+
+            _attackRangeView = Enemy.AttackRangeView;
         }
 
         private void Shoot()

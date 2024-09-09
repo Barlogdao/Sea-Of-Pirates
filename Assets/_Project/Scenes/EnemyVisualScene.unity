@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasJoystick
       objectReference: {fileID: 0}
+    - target: {fileID: 3342281790771510793, guid: 78004b87013a04544a4ae68550a4af99, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3848157551461508018, guid: 78004b87013a04544a4ae68550a4af99, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -901,7 +905,7 @@ PrefabInstance:
     - target: {fileID: 3683243696000880406, guid: 5c2a31acb04f5ef4b98ddabe058c5e48, type: 3}
       propertyPath: _levelConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 142e009dcec1f6f4ca8bf9b8fcb26e51, type: 2}
+      objectReference: {fileID: 11400000, guid: d1e313182a44e3646b8efade58ec6d91, type: 2}
     - target: {fileID: 3683243696000880406, guid: 5c2a31acb04f5ef4b98ddabe058c5e48, type: 3}
       propertyPath: _playerPrefab
       value: 
@@ -1361,7 +1365,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 79.56
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1387,8 +1391,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979110784}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4406362, y: 0, z: 0, w: 0.8976858}
-  m_LocalPosition: {x: 0.1, y: 38.8, z: 39.4}
+  m_LocalRotation: {x: -0.123509206, y: -0.12410142, z: 0.015569989, w: -0.9844298}
+  m_LocalPosition: {x: 52.82593, y: 22.399446, z: 95.11787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1421,7 +1425,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
+  m_CustomBlends: {fileID: 11400000, guid: 9321e0c2823c8ab4094ebadd410bc8cd, type: 2}
   m_CameraCutEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2823,7 +2827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3752899164081436785, guid: fdf085d27830b934ba566ba47ffd1403, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1
+      value: -75.6
       objectReference: {fileID: 0}
     - target: {fileID: 3752899164081436785, guid: fdf085d27830b934ba566ba47ffd1403, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2831,7 +2835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3752899164081436785, guid: fdf085d27830b934ba566ba47ffd1403, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 69.4
+      value: 22.2
       objectReference: {fileID: 0}
     - target: {fileID: 3752899164081436785, guid: fdf085d27830b934ba566ba47ffd1403, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3168,6 +3172,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 743500702}
     m_Modifications:
+    - target: {fileID: 753491130673498899, guid: 2294d50fb12803046a1e847ce592a344, type: 3}
+      propertyPath: _questConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: b7b7e40811b4b9b4dbb06aaaa8963c22, type: 2}
     - target: {fileID: 753491130673498899, guid: 2294d50fb12803046a1e847ce592a344, type: 3}
       propertyPath: _triggerZoneRadius
       value: 15

@@ -8,11 +8,11 @@ namespace Project.Enemies
 {
     public class EnemyDeathNotifier: IEnemyDeathNotifier, IDisposable
     {
-        private readonly List<EnemySpawner> _enemySpawners;
+        private readonly List<BaseEnemySpawner> _enemySpawners;
 
         public event Action<EnemyConfig> EnemyDied;
 
-        public EnemyDeathNotifier(List<EnemySpawner> enemySpawners)
+        public EnemyDeathNotifier(List<BaseEnemySpawner> enemySpawners)
         {
             _enemySpawners = enemySpawners;
 

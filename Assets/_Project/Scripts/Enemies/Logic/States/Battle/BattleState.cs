@@ -7,7 +7,6 @@ namespace Project.Enemies.Logic.States.Battle
 {
     public abstract class BattleState : AliveState
     {
-        private AttackRangeView _attackRangeView;
         private EnemyView _enemyView;
 
         protected Vector3 DirectionToPlayer => Player.Position - Enemy.transform.position;
@@ -19,7 +18,6 @@ namespace Project.Enemies.Logic.States.Battle
             base.Enter();
             Detector.PlayerLost += OnPlayerLost;
             Player.Died += OnPlayerDied;
-            _attackRangeView.ShowAttackRange();
             _enemyView.ShowHud();
         }
 
@@ -28,7 +26,6 @@ namespace Project.Enemies.Logic.States.Battle
             base.Exit();
             Detector.PlayerLost -= OnPlayerLost;
             Player.Died -= OnPlayerDied;
-            _attackRangeView.HideAttackRange();
             _enemyView.HideHud();
         }
 
@@ -36,7 +33,6 @@ namespace Project.Enemies.Logic.States.Battle
         {
             base.OnInitialize();
 
-            _attackRangeView = Enemy.AttackRangeView;
             _enemyView = Enemy.View;
         }
 

@@ -28,13 +28,21 @@ namespace Project.Enemies.Logic.States.Battle
         [SerializeField] int _projectilesAmount = 10;
         [SerializeField] private AudioClip _shootSound;
 
+        private readonly float _launchDelay = 0.05f;
+
         private float HalfAttackAngle => _attackAngle / 2f;
-        private float _launchDelay = 0.05f;
 
         public override void Enter()
         {
             base.Enter();
             EnterAttackPhase().Forget();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+
+            Enemy.AttackRangeView.HideAttackRange();
         }
 
         private async UniTaskVoid EnterAttackPhase()
@@ -54,7 +62,7 @@ namespace Project.Enemies.Logic.States.Battle
             while (conditonAwaiter.IsCompleted == false)
             {
                 Enemy.Mover.RotateTowards(Player.Position, GetClosestSide());
-                await UniTask.Yield();
+                await UniTask.NextFrame();
             }
 
             linkedCts.Cancel();

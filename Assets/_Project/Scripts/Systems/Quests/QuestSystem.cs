@@ -46,7 +46,7 @@ namespace Project.Systems.Quests
 
         private void InitializeQuestGivers()
         {
-            Dictionary<int, QuestStatus> quests = _questsProvider.LoadQuests();
+            Dictionary<string, QuestStatus> quests = _questsProvider.LoadQuests();
             foreach (QuestGiver questGiver in _questGivers)
             {
                 var id = questGiver.QuestID;
@@ -58,7 +58,7 @@ namespace Project.Systems.Quests
             }
         }
 
-        private void OnQuestStatusChanged(int id, QuestStatus status)
+        private void OnQuestStatusChanged(string id, QuestStatus status)
         {
             _questsProvider.UpdateQuest(id, status);
 

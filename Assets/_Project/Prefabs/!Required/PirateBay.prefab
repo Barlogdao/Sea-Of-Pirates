@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableZone: {fileID: 8333139739126647189}
   _zoneRenderer: {fileID: 6411840275641768627}
-  _zoneColor: {r: 0, g: 0.972549, b: 0.4812563, a: 1}
+  _zoneColor: {r: 0, g: 0.972549, b: 0.5393458, a: 1}
   _scaleDuration: 0.7
   _ease: 28
 --- !u!1 &8816798284953772236

@@ -8,7 +8,7 @@ namespace Project.Systems.Data
     public class QuestsProvider : IQuestsProvider
     {
         private IQuestsData _questsData;
-        private Dictionary<int, QuestStatus> _quests;
+        private Dictionary<string, QuestStatus> _quests;
 
         public QuestsProvider(IQuestsData questsData)
         {
@@ -16,14 +16,14 @@ namespace Project.Systems.Data
             _quests = null;
         }
 
-        public Dictionary<int, QuestStatus> LoadQuests()
+        public Dictionary<string, QuestStatus> LoadQuests()
         {
             if (_quests != null)
             {
                 return _quests;
             }
 
-            _quests = new Dictionary<int, QuestStatus>();
+            _quests = new Dictionary<string, QuestStatus>();
 
             foreach (QuestData questData in _questsData.Quests)
             {
@@ -33,7 +33,7 @@ namespace Project.Systems.Data
             return _quests;
         }
 
-        public void UpdateQuest(int questID, QuestStatus status)
+        public void UpdateQuest(string questID, QuestStatus status)
         {
             _quests[questID] = status;
 
