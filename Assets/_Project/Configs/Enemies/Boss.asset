@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _damage: 35
+  _damage: 30
   _attackCooldown: 3
   _speed: 4
   _rotationSpeed: 37.6

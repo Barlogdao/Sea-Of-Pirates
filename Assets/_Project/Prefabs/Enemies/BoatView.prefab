@@ -123,7 +123,7 @@ PrefabInstance:
     - target: {fileID: 4837104672505128820, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 9e2ca1b3a4930a0478e9a1785b96f2dd, type: 3}
+      objectReference: {fileID: 8536425139288874787, guid: 02b486791acbc4b41b6270eefffae50c, type: 3}
     - target: {fileID: 6363629634549639443, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
       propertyPath: m_FillAmount
       value: 0.562

@@ -3,7 +3,7 @@
     [System.Serializable]
     public class GameResourceData
     {
-        public int ID;
+        public string ID;
         public int Value;
     }
 }

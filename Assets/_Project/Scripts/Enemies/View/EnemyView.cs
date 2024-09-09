@@ -14,7 +14,6 @@ namespace Project.Enemies.View
         [SerializeField] private PunchShipTween _punchTween;
         [SerializeField] private MeshFilter _shipMesh;
         [SerializeField] private MeshRenderer _shipRenderer;
-        [SerializeField] private MeshRenderer _sailsRenderer;
         [SerializeField] private AudioClip _shootSound;
         [SerializeField] private AudioClip _hitSound;
         [SerializeField] private EnemyHudView _hudView;
@@ -71,9 +70,6 @@ namespace Project.Enemies.View
                 return;
 
             _shipRenderer.material = levelMaterial;
-
-            if (_sailsRenderer != null)
-                _sailsRenderer.material = levelMaterial;
         }
     }
 }

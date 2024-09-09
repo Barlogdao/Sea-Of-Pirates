@@ -49,10 +49,6 @@ PrefabInstance:
       value: MediumShipView
       objectReference: {fileID: 0}
     - target: {fileID: 1333205628139548919, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
-      propertyPath: _sailMesh
-      value: 
-      objectReference: {fileID: 7237898063436807687}
-    - target: {fileID: 1333205628139548919, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
       propertyPath: _shipMesh
       value: 
       objectReference: {fileID: 8630969869801132236}
@@ -147,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 4837104672505128820, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5367830535319256574, guid: a7a7124f12a46b147af73f9629019624, type: 3}
+      objectReference: {fileID: -5367830535319256574, guid: 60f7d2c1490069d48aa47b4489f98c8f, type: 3}
     - target: {fileID: 5806733922590460351, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -176,11 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038a84e81d7d1ef4996b9f97165a82d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!33 &7237898063436807687 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: 5806733922590460351, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
-  m_PrefabInstance: {fileID: 3812161073534236600}
-  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8630969869801132236 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 4837104672505128820, guid: 9187880d1d82dd146ae63b6d252fad82, type: 3}
