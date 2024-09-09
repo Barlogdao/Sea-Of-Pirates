@@ -6,29 +6,32 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
 
-public class SceneLoader : MonoBehaviour, IProgress<float>
+namespace Project.Infrastructure
 {
-    [SerializeField] private Image _loadingBar;
-
-    private ILevelSceneService _levelSceneService;
-
-    private async UniTaskVoid Start()
+    public class SceneLoader : MonoBehaviour, IProgress<float>
     {
-        _loadingBar.fillAmount = 0;
+        [SerializeField] private Image _loadingBar;
 
-        await SceneManager
-            .LoadSceneAsync(_levelSceneService.CurrentLevel)
-            .ToUniTask(progress: this);
-    }
+        private ILevelSceneService _levelSceneService;
 
-    public void Report(float value)
-    {
-        _loadingBar.fillAmount = value;
-    }
+        private async UniTaskVoid Start()
+        {
+            _loadingBar.fillAmount = 0;
 
-    [Inject]
-    private void Construct(ILevelSceneService levelSceneService)
-    {
-        _levelSceneService = levelSceneService;
+            await SceneManager
+                .LoadSceneAsync(_levelSceneService.CurrentLevel)
+                .ToUniTask(progress: this);
+        }
+
+        public void Report(float value)
+        {
+            _loadingBar.fillAmount = value;
+        }
+
+        [Inject]
+        private void Construct(ILevelSceneService levelSceneService)
+        {
+            _levelSceneService = levelSceneService;
+        }
     }
 }
