@@ -973,7 +973,7 @@ PrefabInstance:
     - target: {fileID: 3683243696000880406, guid: 5c2a31acb04f5ef4b98ddabe058c5e48, type: 3}
       propertyPath: _levelConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 820b335e2215ed24bb2dc305c756643e, type: 2}
+      objectReference: {fileID: 11400000, guid: 142e009dcec1f6f4ca8bf9b8fcb26e51, type: 2}
     - target: {fileID: 3683243696000880406, guid: 5c2a31acb04f5ef4b98ddabe058c5e48, type: 3}
       propertyPath: _playerPrefab
       value: 
