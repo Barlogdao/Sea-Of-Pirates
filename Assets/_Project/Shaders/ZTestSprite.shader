@@ -1,7 +1,7 @@
 
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Sprites/Default"
+Shader "Sprites/ZTest"
 {
     Properties
     {
@@ -28,7 +28,7 @@ Shader "Sprites/Default"
         Cull Off
         Lighting Off
         ZWrite Off
-        ZTest Always
+        ZTest LEqual
         Blend One OneMinusSrcAlpha
 
         Pass

@@ -354,7 +354,7 @@ PrefabInstance:
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _enemyConfig
       value: 
-      objectReference: {fileID: 11400000, guid: c0f4f9803cedda9408c36f50d2ef7056, type: 2}
+      objectReference: {fileID: 11400000, guid: c053826b77db6e0498996febf212bd0b, type: 2}
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _spawnRadius
       value: 32.35
@@ -859,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _enemyConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 1949a8bc4f77e7d4e81c6c1b4e1c8a9a, type: 2}
+      objectReference: {fileID: 11400000, guid: 24a22a4f15760ba40abdaed610b89560, type: 2}
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _spawnRadius
       value: 44.7
@@ -1539,6 +1539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 3203546240083801509, guid: b0fc33bedc2eb4c429fcb740a4300a35, type: 3}
+      propertyPath: _enemyConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f280748c7f070a41b613adc947d8017, type: 2}
     - target: {fileID: 6297248264014575848, guid: b0fc33bedc2eb4c429fcb740a4300a35, type: 3}
       propertyPath: m_LocalPosition.x
       value: 46.8
@@ -2298,7 +2302,7 @@ PrefabInstance:
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _enemyConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 82b96a39cd676a34fba372e78b1f8d0e, type: 2}
+      objectReference: {fileID: 11400000, guid: ec61097cb4e3d514186ef0c4d6abf718, type: 2}
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _spawnRadius
       value: 32.35
@@ -2527,7 +2531,7 @@ PrefabInstance:
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _enemyConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 5cc56adb66b32cd4eb731575827a2023, type: 2}
+      objectReference: {fileID: 11400000, guid: a9c0b5af81b10bf459f793c402f34fd4, type: 2}
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _spawnRadius
       value: 41.79
@@ -2677,7 +2681,7 @@ PrefabInstance:
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _enemyConfig
       value: 
-      objectReference: {fileID: 11400000, guid: c0f4f9803cedda9408c36f50d2ef7056, type: 2}
+      objectReference: {fileID: 11400000, guid: c053826b77db6e0498996febf212bd0b, type: 2}
     - target: {fileID: 3203546240083801509, guid: d062034c354193c4ca52527229d1627e, type: 3}
       propertyPath: _spawnRadius
       value: 32.35
@@ -3311,7 +3315,7 @@ PrefabInstance:
     - target: {fileID: 753491130673498899, guid: 2294d50fb12803046a1e847ce592a344, type: 3}
       propertyPath: _questConfig
       value: 
-      objectReference: {fileID: 11400000, guid: b7b7e40811b4b9b4dbb06aaaa8963c22, type: 2}
+      objectReference: {fileID: 11400000, guid: 9050d47aa7b732743b7d0c22234d82e4, type: 2}
     - target: {fileID: 753491130673498899, guid: 2294d50fb12803046a1e847ce592a344, type: 3}
       propertyPath: _triggerZoneRadius
       value: 15

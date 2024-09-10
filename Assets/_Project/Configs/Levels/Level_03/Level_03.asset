@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelScene: Level02
   <IsLastLevel>k__BackingField: 1
-  <LevelMaterial>k__BackingField: {fileID: 2100000, guid: 78edba5dc4cc2684c8e99f363873ff77, type: 2}
-  <WaterMaterial>k__BackingField: {fileID: 2100000, guid: 55f64e90dbdbd5040b094633fecefe90, type: 2}
+  <LevelMaterial>k__BackingField: {fileID: 2100000, guid: 89a8c4d05aebfbd40ad71b8f56d3f20f, type: 2}
+  <WaterMaterial>k__BackingField: {fileID: 2100000, guid: e35e7de242539684c92b1b3912c846e1, type: 2}

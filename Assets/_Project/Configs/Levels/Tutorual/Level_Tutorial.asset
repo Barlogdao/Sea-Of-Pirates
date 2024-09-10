@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbf33b687a09a2a4886add56b719d893, type: 3}
-  m_Name: Level_02
+  m_Name: Level_Tutorial
   m_EditorClassIdentifier: 
   nextLevelScene: Level02
   <IsLastLevel>k__BackingField: 1

@@ -1,3 +1,4 @@
+using Project.Utils.Extensions;
 using UnityEngine;
 
 [RequireComponent(typeof(Canvas))]
@@ -15,6 +16,8 @@ public class CameraLook : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.rotation = _camera.transform.rotation;
+        Quaternion rotation = _camera.transform.rotation;
+        Vector3 rot = rotation.eulerAngles.WithX(transform.rotation.eulerAngles.x);
+        transform.rotation = rotation;
     }
 }

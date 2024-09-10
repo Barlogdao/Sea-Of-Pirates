@@ -1,5 +1,8 @@
 using Cinemachine;
 using Cysharp.Threading.Tasks;
+using Project.Spawner;
+using Project.Systems.Quests;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Infrastructure
@@ -11,6 +14,9 @@ namespace Project.Infrastructure
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private GameObject _canvasJoystick;
         [SerializeField] private GameObject _canvasPonter;
+
+        private List<BaseEnemySpawner> _enemySpawners;
+        private QuestEnemyHandler _questEnemyHandler;
 
         private async UniTaskVoid Start()
         {
