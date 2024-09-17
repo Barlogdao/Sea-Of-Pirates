@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: ItemsSheet
   m_EditorClassIdentifier: 
   _gameItems:
+  - {fileID: 11400000, guid: 654c2cc985ce56145b280c7d12727524, type: 2}
   - {fileID: 11400000, guid: 6d8d916ddb2d86d43a4a45f9983e638b, type: 2}
   - {fileID: 11400000, guid: 1970f88d9fce55a4296b835baac88485, type: 2}
   - {fileID: 11400000, guid: a7e6bfd488c196f4fa4c1986c4e9120e, type: 2}
+  - {fileID: 11400000, guid: 048d9471fc85b1e42ae976d892463a62, type: 2}
   - {fileID: 11400000, guid: a2d61526643bc0d408488a1e4f3c4cee, type: 2}
   - {fileID: 11400000, guid: e75fbc60c8e6fa7438254a0d0ee60d34, type: 2}
   - {fileID: 11400000, guid: 0afbcc26a82c0f54397eb7bb4b45c4d7, type: 2}
+  - {fileID: 11400000, guid: 7debdf695e41fd14db304b168045f7b9, type: 2}
   - {fileID: 11400000, guid: 778560040b9df654eb30a96d9288874b, type: 2}
   - {fileID: 11400000, guid: c9bea0b1f9fe7df4682ff05cf81cfafa, type: 2}
   - {fileID: 11400000, guid: 35d2582d6a7439e4d90d895601586234, type: 2}
