@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _view: {fileID: 301624018786779958}
-  _healSound: {fileID: 0}
+  _healSound: {fileID: 8300000, guid: c879cb15799960344bf801ff3e9f16d5, type: 3}
 --- !u!114 &5742568367049463457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +82,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deathSound: {fileID: 8300000, guid: 6c6311809e338bf42adb4ccc974a2ed4, type: 3}
+  _deathSounds:
+    ID: 1073741838
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
 --- !u!54 &3722445594469159487
 Rigidbody:
   m_ObjectHideFlags: 0

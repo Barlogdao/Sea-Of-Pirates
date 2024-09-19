@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using Cysharp.Threading.Tasks;
 using Project.Interactables;
 using Project.Interfaces.Audio;
@@ -12,6 +13,7 @@ namespace Project.Players.Logic
     public class PlayerDeathHandler : MonoBehaviour
     {
         [SerializeField] private AudioClip _deathSound;
+        [SerializeField] private SoundID _deathSounds;
 
         private Player _player;
         private PlayerView _playerView;
