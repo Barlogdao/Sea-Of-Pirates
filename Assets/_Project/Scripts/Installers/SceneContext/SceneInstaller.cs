@@ -70,7 +70,6 @@ namespace Project.Installers.SceneContext
             Container.BindInterfacesAndSelfTo<LeaderboardSystem>().FromNew().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<QuestEnemyHandler>().FromNew().AsSingle().NonLazy();
             Container.BindInterfacesTo<EnemyDeathNotifier>().AsSingle();
-            Container.BindInterfacesTo<ScoreController>().AsSingle().NonLazy();
             Container.Bind<CameraSystem>().FromComponentInHierarchy().AsSingle();
         }
 
