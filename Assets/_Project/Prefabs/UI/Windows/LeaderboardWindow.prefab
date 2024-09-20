@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 1250373507190907416}
   - component: {fileID: 8169816898055229555}
   - component: {fileID: 7214267274703453062}
+  - component: {fileID: 2339761542437810173}
   m_Layer: 5
   m_Name: LeaderboardWindow
   m_TagString: Untagged
@@ -372,7 +373,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
@@ -459,6 +460,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2339761542437810173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2761463151485004438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902a1a20257092f4c83be20e400f5bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3008524496735111114
 GameObject:
   m_ObjectHideFlags: 0
