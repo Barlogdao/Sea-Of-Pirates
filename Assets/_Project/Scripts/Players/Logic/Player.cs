@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using Project.Interfaces.Audio;
 using Project.Interfaces.Hold;
 using Project.Interfaces.Stats;
@@ -12,7 +13,7 @@ namespace Project.Players.Logic
     public class Player : MonoBehaviour
     {
         [SerializeField] private PlayerView _view;
-        [SerializeField] private AudioClip _healSound;
+        [SerializeField] private SoundID _healSound;
 
         private IPlayerStats _playerStats;
         private IPlayerHold _playerHold;

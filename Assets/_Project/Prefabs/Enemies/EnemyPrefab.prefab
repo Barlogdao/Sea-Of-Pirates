@@ -50,6 +50,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerDetector: {fileID: 5826953493269414066}
   _attackRangeView: {fileID: 7096780384470376664}
+  _deathSound:
+    ID: 1073741838
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
 --- !u!65 &7343502970249079698
 BoxCollider:
   m_ObjectHideFlags: 0

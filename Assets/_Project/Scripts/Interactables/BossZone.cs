@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using Project.Interfaces.Audio;
 using Project.Players.Logic;
 using Project.Spawner;
@@ -9,7 +10,7 @@ namespace Project.Interactables
     public class BossZone : CameraViewZone
     {
         [SerializeField] private BossSpawner _bossSpawner;
-        [SerializeField] private AudioClip _enterZoneSound;
+        [SerializeField] private SoundID _enterZoneSound;
 
         private IAudioService _audioService;
 

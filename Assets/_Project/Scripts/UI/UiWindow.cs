@@ -1,4 +1,5 @@
-﻿using Project.Configs.UI;
+﻿using Ami.BroAudio;
+using Project.Configs.UI;
 using Project.Interfaces.Audio;
 using Project.Utils.Tweens;
 using UnityEngine;
@@ -14,8 +15,8 @@ namespace Project.UI
         [SerializeField] private ScaleTween _scaleTween;
 
         private IAudioService _audioService;
-        private AudioClip _openWindowSound;
-        private AudioClip _closeWindowSound;
+        private SoundID _openWindowSound;
+        private SoundID _closeWindowSound;
 
         private Canvas _windowCanvas;
 

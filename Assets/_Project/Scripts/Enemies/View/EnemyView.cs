@@ -1,4 +1,5 @@
-﻿using NaughtyAttributes;
+﻿using Ami.BroAudio;
+using NaughtyAttributes;
 using Project.Configs.Level;
 using Project.Enemies.Logic;
 using Project.General.View;
@@ -15,8 +16,8 @@ namespace Project.Enemies.View
         [SerializeField] private PunchShipTween _punchTween;
         [SerializeField] private MeshFilter _shipMesh;
         [SerializeField] private MeshRenderer _shipRenderer;
-        [SerializeField] private AudioClip _shootSound;
-        [SerializeField] private AudioClip _hitSound;
+        [SerializeField] private SoundID _shootSound;
+        [SerializeField] private SoundID _hitSound;
         [SerializeField] private EnemyHudView _hudView;
         [SerializeField, ShowAssetPreview] private Sprite _icon;
 

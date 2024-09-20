@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Ami.BroAudio;
 using Project.Configs.Game;
 using Project.Interfaces.Audio;
 using Project.Interfaces.Data;
@@ -14,7 +15,7 @@ namespace Project.Systems.Quests
         private readonly IQuestsProvider _questsProvider;
         private readonly IAudioService _audioService;
         private readonly List<QuestGiver> _questGivers;
-        private readonly AudioClip _questDoneSound;
+        private readonly SoundID _questDoneSound;
 
         public QuestSystem(
             List<QuestGiver> questGivers,

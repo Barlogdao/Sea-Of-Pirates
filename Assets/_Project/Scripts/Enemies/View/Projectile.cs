@@ -1,4 +1,5 @@
 ﻿using System;
+using Ami.BroAudio;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Project.Interfaces.Audio;
@@ -11,7 +12,7 @@ namespace Project.Enemies.View
     {
         [SerializeField] private ParticleSystem _splashParticles;
         [SerializeField] private MeshRenderer _projectileRenderer;
-        [SerializeField] private AudioClip _splashSound;
+        [SerializeField] private SoundID _splashSound;
 
         private const float ScaleMiltiplier = 2f;
         private const float VisualRadiusOffset = 0.2f;

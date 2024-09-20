@@ -1,4 +1,5 @@
 using System;
+using Ami.BroAudio;
 using Cysharp.Threading.Tasks;
 using Project.Configs.Enemies;
 using Project.Configs.Level;
@@ -21,6 +22,7 @@ namespace Project.Enemies.Logic
 
         [SerializeField] private PlayerDetector _playerDetector;
         [SerializeField] private AttackRangeView _attackRangeView;
+        [SerializeField] private SoundID _deathSound;
 
         private EnemyConfig _config;
         private BoxCollider _shipCollider;
@@ -140,6 +142,7 @@ namespace Project.Enemies.Logic
         private void Die()
         {
             Died?.Invoke(this);
+            _audioService.PlaySound(_deathSound);
             _shipCollider.enabled = false;
         }
 

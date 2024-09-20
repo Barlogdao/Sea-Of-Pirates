@@ -12,16 +12,20 @@ namespace Project.UI
 
         [SerializeField] private CanvasGroup _canvasGroup;
 
+        public bool IsEnable { get; private set; } = true;
+
         public void Enable()
         {
             _canvasGroup.alpha = MaxAlpha;
             _canvasGroup.interactable = true;
+            IsEnable = true;
         }
 
         public void Disable()
         {
             _canvasGroup.alpha = MinAlpha;
             _canvasGroup.interactable = false;
+            IsEnable = false;
         }
 
         public async UniTask EnableAsync(float duration, CancellationToken token)

@@ -1,3 +1,4 @@
+using Project.Interfaces.Audio;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -13,7 +14,7 @@ namespace Project.Systems.Audio
         [SerializeField] private Sprite _muteIcon;
         [SerializeField] private Sprite _unmuteIcon;
 
-        private AudioService _audioService;
+        private IAudioService _audioService;
         private bool _isMuted;
 
         private void Start()
@@ -26,7 +27,7 @@ namespace Project.Systems.Audio
         }
 
         [Inject]
-        public void Construct(AudioService audioService)
+        public void Construct(IAudioService audioService)
         {
             _audioService = audioService;
         }

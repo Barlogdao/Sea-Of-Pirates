@@ -14,9 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <GameItemViewColor>k__BackingField: {fileID: 11400000, guid: 320206fc69b45404e8f5e690e0ac4837, type: 2}
   <InApptemViewColor>k__BackingField: {fileID: 11400000, guid: a09fbbd5fee9fd14e926652e5f7c55c8, type: 2}
-  <OpenWindowSound>k__BackingField: {fileID: 8300000, guid: 8f36e651978180241a905029b53cc475, type: 3}
-  <CloseWindowSound>k__BackingField: {fileID: 8300000, guid: 9800152f6e804744c9b54a332e19e87d, type: 3}
-  <ShowButtonSound>k__BackingField: {fileID: 8300000, guid: e0bab816a2b4059478c7087ec70061ea, type: 3}
-  <RewardOfferSound>k__BackingField: {fileID: 8300000, guid: e0bab816a2b4059478c7087ec70061ea, type: 3}
-  <UpgradeSound>k__BackingField: {fileID: 8300000, guid: 4b242e2cf1b6b2b4281d0a82175fc426, type: 3}
-  <PlayerLooseSound>k__BackingField: {fileID: 8300000, guid: 7653deff0da046444958851d46a1bcf3, type: 3}
+  <OpenWindowSound>k__BackingField:
+    ID: 536870914
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <CloseWindowSound>k__BackingField:
+    ID: 536870913
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <ShowButtonSound>k__BackingField:
+    ID: 536870914
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <RewardOfferSound>k__BackingField:
+    ID: 536870914
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <UpgradeSound>k__BackingField:
+    ID: 1073741844
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <PlayerLooseSound>k__BackingField:
+    ID: 1073741843
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}

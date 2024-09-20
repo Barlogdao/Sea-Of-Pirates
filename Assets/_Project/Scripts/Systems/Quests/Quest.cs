@@ -79,7 +79,10 @@ namespace Project.Systems.Quests
             {
                 Unsubscribe();
                 ChangeState(QuestState.Done);
+                return;
             }
+
+            StatusChanged?.Invoke(this);
         }
 
         private void ChangeState(QuestState state)
@@ -105,7 +108,6 @@ namespace Project.Systems.Quests
                 _status.Progress++;
 
                 CheckProgress();
-                StatusChanged?.Invoke(this);
             }
         }
     }

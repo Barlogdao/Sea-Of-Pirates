@@ -52,7 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _view: {fileID: 301624018786779958}
-  _healSound: {fileID: 8300000, guid: c879cb15799960344bf801ff3e9f16d5, type: 3}
+  _healSound:
+    ID: 1073741839
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
 --- !u!114 &5742568367049463457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,9 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerRigidbody: {fileID: 3722445594469159487}
-  _rotationSpeed: 120
-  _moveAngleDot: 0.613
-  _reverseMoveMultiplier: 0.121
+  _rotationSpeed: 90
+  _moveAngleDot: 0.55
+  _reverseMoveMultiplier: 0.2
 --- !u!114 &3119734213491335052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2148768d265d70a40b7628e83fb81b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathSound: {fileID: 8300000, guid: 6c6311809e338bf42adb4ccc974a2ed4, type: 3}
-  _deathSounds:
+  _deathSound:
     ID: 1073741838
     _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
 --- !u!54 &3722445594469159487
@@ -280,7 +281,9 @@ MonoBehaviour:
     _elacticity: 1
     _ease: 4
   _waterTrail: {fileID: 487657544277507433}
-  _hitSound: {fileID: 8300000, guid: aa2c78809ec83bc4891d63066860ee29, type: 3}
+  _hitSound:
+    ID: 1073741841
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
   _shipRenderer: {fileID: 4401349661026669237}
   _sailsRenderer: {fileID: 7342724874733782036}
 --- !u!114 &6536938811106678299
@@ -411,7 +414,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea54be3bcdeb2e64ba14265bf017885b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shootSound: {fileID: 8300000, guid: aa2c78809ec83bc4891d63066860ee29, type: 3}
+  _shootSound:
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
   _attackCones: {fileID: 4495760498438621539}
   _appearingTween:
     _duration: 0.3

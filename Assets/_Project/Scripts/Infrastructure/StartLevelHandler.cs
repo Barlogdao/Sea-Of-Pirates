@@ -1,4 +1,6 @@
 using Cysharp.Threading.Tasks;
+using Project.Configs.Game;
+using Project.Interfaces.Audio;
 using Project.Interfaces.SDK;
 using Project.Players.Logic;
 using Project.Spawner;
@@ -24,6 +26,8 @@ namespace Project.Infrastructure
         private UiCanvas _uiCanvas;
         private IGameReadyService _gameReadyService;
         private JoystickCanvas _joystickCanvas;
+        private GameConfig _gameConfig;
+        private IAudioService _audioService;
 
         [Inject]
         public void Construct(
@@ -34,6 +38,8 @@ namespace Project.Infrastructure
             CameraSystem cameraSystem,
             UiCanvas uiCanvas,
             IGameReadyService gameReadyService,
+            IAudioService audioService,
+            GameConfig gameConfig,
             JoystickCanvas joystickCanvas = null)
         {
             _enemySpawners = enemySpawners;
@@ -43,11 +49,15 @@ namespace Project.Infrastructure
             _cameraSystem = cameraSystem;
             _uiCanvas = uiCanvas;
             _gameReadyService = gameReadyService;
+            _gameConfig = gameConfig;
+            _audioService = audioService;
             _joystickCanvas = joystickCanvas;
         }
 
         private async UniTaskVoid Start()
         {
+            _audioService.StopAudio();
+            _audioService.PlayAmbience(_gameConfig.Ambience);
             _playerSpawner.Initialize();
             _player.DisableMove();
             DisableUi();
@@ -63,6 +73,9 @@ namespace Project.Infrastructure
 
             PrepareSpawners();
             InitializeQuestEnemies();
+
+            await UniTask.WaitUntil(() => Input.anyKey);
+            _audioService.PlayMusic(_gameConfig.MainMusic);
         }
 
         private void InitializeQuestEnemies()

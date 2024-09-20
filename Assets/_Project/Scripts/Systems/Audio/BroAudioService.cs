@@ -1,24 +1,19 @@
 using Ami.BroAudio;
 using Project.Interfaces.Audio;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BroAudioService : IAudioService
 {
-    public void PlayMusic(AudioClip clip)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void PlaySound(AudioClip clip)
-    {
-        throw new System.NotImplementedException();
-    }
-
+    private const float FadeTime = 0.1f;
     public void PlayMusic(SoundID id)
     {
         BroAudio.Play(id).AsBGM();
+    }
+
+    public void PlayAmbience(SoundID id)
+    {
+        BroAudio.Stop(BroAudioType.Ambience);
+        BroAudio.Play(id);
     }
 
     public void PlaySound(SoundID id)
@@ -28,12 +23,12 @@ public class BroAudioService : IAudioService
 
     public void MuteAudio()
     {
-        BroAudio.SetVolume(0f);
+        BroAudio.SetVolume(BroAudioType.All,0f, FadeTime);
     }
 
     public void UnmuteAudio()
     {
-        BroAudio.SetVolume(1f);
+        BroAudio.SetVolume(BroAudioType.All, 1f, FadeTime);
     }
 
     public void PauseAudio()
@@ -46,5 +41,10 @@ public class BroAudioService : IAudioService
     {
         AudioListener.pause = false;
         AudioListener.volume = 1f;
+    }
+
+    public void StopAudio()
+    {
+        BroAudio.Stop(BroAudioType.All);
     }
 }

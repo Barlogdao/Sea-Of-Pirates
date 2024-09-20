@@ -1,4 +1,5 @@
 ﻿using System;
+using Ami.BroAudio;
 using Project.Configs.UI;
 using Project.Interfaces.Audio;
 using Project.Utils.Tweens;
@@ -15,7 +16,7 @@ namespace Project.UI
         [SerializeField] private Canvas _windowCanvas;
 
         private IAudioService _audioService;
-        private AudioClip _playerLooseSound;
+        private SoundID _playerLooseSound;
 
         [Inject]
         private void Construct(IAudioService audioService, UiConfigs uiConfigs)

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Ami.BroAudio;
 using DG.Tweening;
 using Project.Interfaces.Audio;
 using Project.Spawner;
@@ -13,7 +14,7 @@ namespace Project.Players.View
         private const float MinProgress = 0f;
         private const float MaxProgress = 1f;
 
-        [SerializeField] private AudioClip _shootSound;
+        [SerializeField] private SoundID _shootSound;
         [SerializeField] private ShipAttackCones _attackCones;
         [SerializeField] private AppearingTransformTween _appearingTween;
         [SerializeField] private Collider _shipCollider;

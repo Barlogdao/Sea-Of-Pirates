@@ -66,7 +66,10 @@ namespace Project.Utils
         [Button(enabledMode: EButtonEnableMode.Playmode)]
         private void ToggleUi()
         {
-            _uiCanvas.gameObject.SetActive(!_uiCanvas.isActiveAndEnabled);
+            if (_uiCanvas.IsEnable)
+                _uiCanvas.Disable();
+            else
+                _uiCanvas.Enable();
         }
     }
 }

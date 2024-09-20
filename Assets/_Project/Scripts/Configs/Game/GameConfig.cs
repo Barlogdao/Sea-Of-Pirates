@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -12,7 +13,9 @@ namespace Project.Configs.Game
         public string LoadingScene => _loadingScene;
         public string FirstLevelScene => _firstLevelScene;
 
-        [field: SerializeField] public AudioClip EarnResourceSound { get; private set; }
-        [field: SerializeField] public AudioClip QuestDoneSound { get; private set; }
+        [field: SerializeField] public SoundID EarnResourceSound { get; private set; }
+        [field: SerializeField] public SoundID QuestDoneSound { get; private set; }
+        [field: SerializeField] public SoundID MainMusic { get; private set; }
+        [field: SerializeField] public SoundID Ambience { get; private set; }
     }
 }

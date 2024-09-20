@@ -18,8 +18,9 @@ MonoBehaviour:
   _volleyPhaseDuration: 10
   _volleyRange: 20
   _volleyInterval: 2
-  _projectilePrefab: {fileID: 2789891042505930356, guid: a4a360d091622804e8b2311db78cd08b, type: 3}
   _projectileRadius: 5
   _projectileExplodeDelay: 2
   _projectilesAmount: 6
-  _shootSound: {fileID: 8300000, guid: aa2c78809ec83bc4891d63066860ee29, type: 3}
+  _shootSound:
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}

@@ -18,11 +18,11 @@ MonoBehaviour:
     MulticlipsPlayMode: 0
     Clips:
     - AudioClip: {fileID: 8300000, guid: 262e8cd8a55950542989ccf82c12895d, type: 3}
-      Volume: 0.6665486
+      Volume: 0.8514364
       Delay: 0
       StartPosition: 0
       EndPosition: 0
-      FadeIn: 0.094
+      FadeIn: 0.003
       FadeOut: 0.205
       Weight: 0
     <MasterVolume>k__BackingField: 1
@@ -45,7 +45,7 @@ MonoBehaviour:
     MulticlipsPlayMode: 0
     Clips:
     - AudioClip: {fileID: 8300000, guid: 79fa3636d7611b3478e79bf33b8d77ca, type: 3}
-      Volume: 0.42239544
+      Volume: 0.23310538
       Delay: 0
       StartPosition: 0
       EndPosition: 0
@@ -72,14 +72,14 @@ MonoBehaviour:
     MulticlipsPlayMode: 0
     Clips:
     - AudioClip: {fileID: 8300000, guid: 28e9f0b3271b63344b331ee7877094aa, type: 3}
-      Volume: 0.7603093
+      Volume: 0.45
       Delay: 0
       StartPosition: 0
       EndPosition: 0
       FadeIn: 0
       FadeOut: 1.331
       Weight: 0
-    <MasterVolume>k__BackingField: 1
+    <MasterVolume>k__BackingField: 0.9
     <Loop>k__BackingField: 0
     <SeamlessLoop>k__BackingField: 1
     <TransitionTime>k__BackingField: 1
@@ -204,16 +204,24 @@ MonoBehaviour:
     SnapToFullVolume: 0
   - <Name>k__BackingField: Ship_Death
     <ID>k__BackingField: 1073741838
-    MulticlipsPlayMode: 0
+    MulticlipsPlayMode: 2
     Clips:
     - AudioClip: {fileID: 8300000, guid: 6c6311809e338bf42adb4ccc974a2ed4, type: 3}
       Volume: 1
       Delay: 0
       StartPosition: 0
-      EndPosition: 4.062
+      EndPosition: 0.806
       FadeIn: 0
-      FadeOut: 1.109
-      Weight: 0
+      FadeOut: 1.073
+      Weight: 1
+    - AudioClip: {fileID: 8300000, guid: 65859b10a4ed41f40805862f436ad168, type: 3}
+      Volume: 0.607723
+      Delay: 0
+      StartPosition: 0
+      EndPosition: 0.841
+      FadeIn: 0
+      FadeOut: 0.614
+      Weight: 3
     <MasterVolume>k__BackingField: 1
     <Loop>k__BackingField: 0
     <SeamlessLoop>k__BackingField: 0
@@ -258,15 +266,23 @@ MonoBehaviour:
     SnapToFullVolume: 0
   - <Name>k__BackingField: Ship_Attack
     <ID>k__BackingField: 1073741840
-    MulticlipsPlayMode: 0
+    MulticlipsPlayMode: 2
     Clips:
     - AudioClip: {fileID: 8300000, guid: b82879f833ef9f742a6c55911eb75769, type: 3}
-      Volume: 0.8994846
+      Volume: 0.8786055
       Delay: 0
       StartPosition: 0
       EndPosition: 0
       FadeIn: 0
       FadeOut: 0.244
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 58f595884fa6f1146a47f1c5563b05ea, type: 3}
+      Volume: 0.5421476
+      Delay: 0
+      StartPosition: 0
+      EndPosition: 0
+      FadeIn: 0
+      FadeOut: 0.169
       Weight: 0
     <MasterVolume>k__BackingField: 1
     <Loop>k__BackingField: 0
@@ -285,7 +301,7 @@ MonoBehaviour:
     SnapToFullVolume: 0
   - <Name>k__BackingField: Ship_Hitted
     <ID>k__BackingField: 1073741841
-    MulticlipsPlayMode: 0
+    MulticlipsPlayMode: 2
     Clips:
     - AudioClip: {fileID: 8300000, guid: f3daf13c9ad43874fa8107fa36968986, type: 3}
       Volume: 1
@@ -294,7 +310,23 @@ MonoBehaviour:
       EndPosition: 1.129
       FadeIn: 0.029
       FadeOut: 0.268
-      Weight: 0
+      Weight: 2
+    - AudioClip: {fileID: 8300000, guid: c5bd8f6103bcc3d4b8188829bdf374e9, type: 3}
+      Volume: 0.76987505
+      Delay: 0
+      StartPosition: 0
+      EndPosition: 0
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 1
+    - AudioClip: {fileID: 8300000, guid: 79399c3c7f9e11640960b3a7e27b7361, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 0
+      EndPosition: 0
+      FadeIn: 0
+      FadeOut: 0.113
+      Weight: 1
     <MasterVolume>k__BackingField: 1
     <Loop>k__BackingField: 0
     <SeamlessLoop>k__BackingField: 0
@@ -312,9 +344,9 @@ MonoBehaviour:
     SnapToFullVolume: 0
   - <Name>k__BackingField: Water_Splash
     <ID>k__BackingField: 1073741842
-    MulticlipsPlayMode: 0
+    MulticlipsPlayMode: 2
     Clips:
-    - AudioClip: {fileID: 8300000, guid: 5aa0ac8d61f477f4f88236e63e1ac8ef, type: 3}
+    - AudioClip: {fileID: 8300000, guid: c8b8492c238499c47ad2c01b63877029, type: 3}
       Volume: 1
       Delay: 0
       StartPosition: 0
@@ -322,7 +354,15 @@ MonoBehaviour:
       FadeIn: 0
       FadeOut: 0
       Weight: 0
-    <MasterVolume>k__BackingField: 1
+    - AudioClip: {fileID: 8300000, guid: be4a9a02c21d10045805bcd0e4e84f76, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 0
+      EndPosition: 0
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    <MasterVolume>k__BackingField: 0.79398084
     <Loop>k__BackingField: 0
     <SeamlessLoop>k__BackingField: 0
     <TransitionTime>k__BackingField: 1
@@ -337,7 +377,7 @@ MonoBehaviour:
       BPM: 0
       Beats: 0
     SnapToFullVolume: 0
-  - <Name>k__BackingField: Player_Death
+  - <Name>k__BackingField: Player_Loose
     <ID>k__BackingField: 1073741843
     MulticlipsPlayMode: 0
     Clips:

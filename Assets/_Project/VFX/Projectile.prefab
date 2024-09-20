@@ -132,7 +132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _splashParticles: {fileID: 4431309705165833667}
   _projectileRenderer: {fileID: 4246911824315754663}
-  _splashSound: {fileID: 8300000, guid: 5aa0ac8d61f477f4f88236e63e1ac8ef, type: 3}
+  _splashSound:
+    ID: 1073741842
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
 --- !u!199 &5653946966111077270
 ParticleSystemRenderer:
   serializedVersion: 6

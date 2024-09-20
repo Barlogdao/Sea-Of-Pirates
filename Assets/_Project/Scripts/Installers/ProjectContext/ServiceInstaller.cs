@@ -1,11 +1,9 @@
 using Lean.Localization;
-using Project.Interfaces.Audio;
 using Project.Interfaces.SDK;
 using Project.SDK;
 using Project.SDK.Advertisment;
 using Project.SDK.InApp;
 using Project.SDK.Leaderboard;
-using Project.Systems.Audio;
 using Project.Systems.Pause;
 using UnityEngine;
 using Zenject;
@@ -14,14 +12,13 @@ namespace Project.Installers.ProjectContext
 {
     public class ServiceInstaller : MonoInstaller
     {
-        [SerializeField] private AudioService _audioServicePrefab;
         [SerializeField] private LeanLocalization _localizationPrefab;
 
         public override void InstallBindings()
         {
             Container.Bind<LeanLocalization>().FromComponentInNewPrefab(_localizationPrefab).AsSingle().NonLazy();
 
-            Container.BindInterfacesAndSelfTo<AudioService>().FromComponentInNewPrefab(_audioServicePrefab).AsSingle();
+            Container.BindInterfacesAndSelfTo<BroAudioService>().AsSingle();
             Container.Bind<PauseService>().FromNew().AsSingle();
 
             BindSDK();

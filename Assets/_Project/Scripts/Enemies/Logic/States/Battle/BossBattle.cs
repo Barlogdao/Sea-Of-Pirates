@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Ami.BroAudio;
+using Cysharp.Threading.Tasks;
 using NaughtyAttributes;
 using Project.Enemies.View;
 using Project.Players.Logic;
@@ -25,7 +26,7 @@ namespace Project.Enemies.Logic.States.Battle
         [SerializeField] float _projectileRadius = 4f;
         [SerializeField] float _projectileExplodeDelay = 4f;
         [SerializeField] int _projectilesAmount = 10;
-        [SerializeField] private AudioClip _shootSound;
+        [SerializeField] private SoundID _shootSound;
 
         private readonly float _launchDelay = 0.05f;
 

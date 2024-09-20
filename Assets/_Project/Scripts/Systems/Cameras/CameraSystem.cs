@@ -5,6 +5,7 @@ using Cinemachine;
 using Cysharp.Threading.Tasks;
 using Project.Configs.Game;
 using Project.Players.Logic;
+using Project.UI;
 using UnityEngine;
 using Zenject;
 
@@ -22,13 +23,18 @@ namespace Project.Systems.Cameras
         private CinemachineBrain _brain;
         private Player _player;
         private CinemachineTransposer _targetCameraTransposer;
+        private UiCanvas _uiCanvas;
         private Vector3 _followOffset;
 
         [Inject]
-        public void Construct(Player player, CinemachineBrain brain)
+        public void Construct(
+            Player player, 
+            CinemachineBrain brain,
+            UiCanvas uiCanvas)
         {
             _player = player;
             _brain = brain;
+            _uiCanvas = uiCanvas;
 
             _cameras = new List<CinemachineVirtualCamera>()
             {
@@ -76,11 +82,14 @@ namespace Project.Systems.Cameras
 
         public async UniTaskVoid ShowTarget(Transform target, float duration)
         {
+            _uiCanvas.Disable();
             _player.DisableMove();
             GoToTarget(target);
             await UniTask.Delay(TimeSpan.FromSeconds(duration), cancellationToken: destroyCancellationToken);
             GoToPlayer();
+            await UniTask.WaitUntil(() => _brain.IsBlending == false, cancellationToken: destroyCancellationToken);
             _player.EnableMove();
+            _uiCanvas.Enable();
         }
 
         private void SetPlayerCamera()

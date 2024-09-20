@@ -70,4 +70,6 @@ MonoBehaviour:
   _gizmosColor: {r: 1, g: 0.14328893, b: 0, a: 1}
   _followOffset: {fileID: 11400000, guid: 6952a1ccfd011ed4e84775d67286426a, type: 2}
   _bossSpawner: {fileID: 0}
-  _enterZoneSound: {fileID: 8300000, guid: 8cd47982fb4650b4eb054bf1e83c0d10, type: 3}
+  _enterZoneSound:
+    ID: 1073741837
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}

@@ -113,8 +113,12 @@ MonoBehaviour:
     _ease: 1
   _shipMesh: {fileID: 4837104672505128820}
   _shipRenderer: {fileID: 7302029621314066369}
-  _shootSound: {fileID: 8300000, guid: aa2c78809ec83bc4891d63066860ee29, type: 3}
-  _hitSound: {fileID: 8300000, guid: b82879f833ef9f742a6c55911eb75769, type: 3}
+  _shootSound:
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  _hitSound:
+    ID: 1073741841
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
   _hudView: {fileID: 3067092261741233425}
   _icon: {fileID: 21300000, guid: 37a116adcbd62554e9b00931e9323e54, type: 3}
 --- !u!114 &1456640750507170166

@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Ami.BroAudio;
+using Cysharp.Threading.Tasks;
 using Project.Configs.UI;
 using Project.Interfaces.Audio;
 using Project.Utils.Extensions;
@@ -28,7 +29,7 @@ namespace Project.UI.Reward
 
         private Coroutine _offerRoutine;
         private IAudioService _audioService;
-        private AudioClip _offerSound;
+        private SoundID _offerSound;
 
         public event Action OfferExpired;
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Ami.BroAudio;
 using Project.Configs.Game;
 using Project.Configs.GameResources;
 using Project.Interfaces.Audio;
@@ -16,7 +17,7 @@ namespace Project.Systems.Storage
         private readonly IResourceStorageProvider _resourceStorageProvider;
         private readonly IAudioService _audioService;
         private readonly Dictionary<GameResource, int> _storage;
-        private readonly AudioClip _earnResourceSound;
+        private readonly SoundID _earnResourceSound;
 
         public event Action<GameResource, int> ResourceAmountChanged;
 

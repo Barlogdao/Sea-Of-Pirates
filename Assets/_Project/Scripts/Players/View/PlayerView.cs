@@ -1,4 +1,5 @@
-﻿using Project.Configs.Level;
+﻿using Ami.BroAudio;
+using Project.Configs.Level;
 using Project.General.View;
 using Project.Interfaces.Audio;
 using Project.Spawner;
@@ -12,7 +13,7 @@ namespace Project.Players.View
     {
         [SerializeField] private PunchShipTween _punchTween;
         [SerializeField] private ParticleSystem _waterTrail;
-        [SerializeField] private AudioClip _hitSound;
+        [SerializeField] private SoundID _hitSound;
         [SerializeField] private MeshRenderer _shipRenderer;
         [SerializeField] private MeshRenderer _sailsRenderer;
 

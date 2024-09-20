@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Agava.YandexGames.Utility;
 using Project.Interfaces.Enemies;
 using Project.Interfaces.SDK;
 using Project.Players.Logic;
@@ -10,7 +8,7 @@ using PlayerPrefs = UnityEngine.PlayerPrefs;
 
 namespace Project.Controllers
 {
-    public class ScoreController : MonoBehaviour, IDisposable
+    public class ScoreController : MonoBehaviour
     {
         private const string SaveNumberEnemysKilled = "SaveNumberEnemysKilled";
 
@@ -18,7 +16,15 @@ namespace Project.Controllers
         private PlayerAttack _playerAttack;
         private int _killsCount = 0;
         private Coroutine _updateLeaderboardCoroutine;
-        private float _delayTime = 5f;
+        private WaitForSeconds _delayTime = new(5f);
+
+        private void OnDestroy()
+        {
+            if (_playerAttack != null)
+            {
+                _playerAttack.EnemyKilled -= OnEnemyKilled;
+            }
+        }
 
         [Inject]
         private void Construct(ILeaderboardService leaderboardService, PlayerAttack playerAttack)
@@ -53,17 +59,9 @@ namespace Project.Controllers
 
         private IEnumerator UpdateLeaderboardScoreAfterDelay()
         {
-            yield return new WaitForSeconds(_delayTime);
+            yield return _delayTime;
             _leaderboardService.SetPlayerScore(_killsCount);
             PlayerPrefs.SetInt(SaveNumberEnemysKilled, _killsCount);
-        }
-
-        public void Dispose()
-        {
-            if (_playerAttack != null)
-            {
-                _playerAttack.EnemyKilled -= OnEnemyKilled;
-            }
         }
     }
 }

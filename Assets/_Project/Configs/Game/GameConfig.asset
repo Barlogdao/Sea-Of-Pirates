@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadingScene: LoadingScene
   _firstLevelScene: Tutorial
-  <EarnResourceSound>k__BackingField: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  <QuestDoneSound>k__BackingField: {fileID: 8300000, guid: 262e8cd8a55950542989ccf82c12895d, type: 3}
+  <EarnResourceSound>k__BackingField:
+    ID: 1073741836
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <QuestDoneSound>k__BackingField:
+    ID: 1073741835
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <MainMusic>k__BackingField:
+    ID: 268435458
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}
+  <Ambience>k__BackingField:
+    ID: 805306370
+    _sourceAsset: {fileID: 11400000, guid: d8461718e4685f542acc5958b8995085, type: 2}

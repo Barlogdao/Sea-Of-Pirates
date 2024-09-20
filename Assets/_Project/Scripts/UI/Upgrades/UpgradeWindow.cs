@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Ami.BroAudio;
 using Project.Configs.UI;
 using Project.Interfaces.Audio;
 using Project.Interfaces.Data;
@@ -20,7 +21,7 @@ namespace Project.UI.Upgrades
         private IUpgradableStats _stats;
         private IPlayerStorage _playerStorage;
         private IAudioService _audioService;
-        private AudioClip _upgradeSound;
+        private SoundID _upgradeSound;
 
         protected override void OnDestroy()
         {
