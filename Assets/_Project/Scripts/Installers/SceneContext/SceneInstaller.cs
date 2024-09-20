@@ -116,6 +116,17 @@ namespace Project.Installers.SceneContext
 
         private void BindMoveHandler()
         {
+#if UNITY_WEBGL && !UNITY_EDITOR
+            if (Agava.WebUtility.Device.IsMobile)
+            {
+                Container.Bind<JoystickCanvas>().FromComponentInNewPrefab(_joystickCanvas).AsSingle();
+                Container.Bind<MoveHandler>().To<MobileMoveHandler>().FromNew().AsSingle();
+            }
+            else
+            {
+                Container.Bind<MoveHandler>().To<DesktopMoveHandler>().FromNew().AsSingle();
+            }
+#else
             if (_isMobile)
             {
                 Container.Bind<JoystickCanvas>().FromComponentInNewPrefab(_joystickCanvas).AsSingle();
@@ -125,16 +136,7 @@ namespace Project.Installers.SceneContext
             {
                 Container.Bind<MoveHandler>().To<DesktopMoveHandler>().FromNew().AsSingle();
             }
-
-            //if (Agava.WebUtility.Device.IsMobile)
-            //{
-            //    Container.Bind<JoystickCanvas>().FromComponentInNewPrefab(_joystickCanvas).AsSingle();
-            //    Container.Bind<MoveHandler>().To<MobileMoveHandler>().FromNew().AsSingle();
-            //}
-            //else
-            //{
-            //    Container.Bind<MoveHandler>().To<DesktopMoveHandler>().FromNew().AsSingle();
-            //}
+#endif
         }
     }
 }
